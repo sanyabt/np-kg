@@ -18,7 +18,7 @@ NP-KG is a graph framework that creates a biomedical knowledge graph (KG) to ide
 
 ### If you want to use the pre-built KGs
 
-Simply download the KG files from [this link]. NP-KG is available as NetworkX multidigraph (gpickle files) and RDF triples (ntriples files). See [evaluation-scripts] for examples of queries and path searches.
+Simply download the KG files from [this link](#). NP-KG is available as NetworkX multidigraph (gpickle files) and RDF triples (ntriples files). See [evaluation-scripts](https://github.com/sanyabt/np-kg/tree/main/evaluation-scripts) for examples of queries and path searches.
 
 ### If you are interested in constructing or extending NP-KG
 
