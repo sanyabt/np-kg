@@ -27,21 +27,20 @@ python -m pip install -r requirements.txt
 
 ### If you want to use the pre-built KGs
 
-Download the knowledge graph and node labels files from [Zenodo](#) and add to local folder - resources/knowledge_graphs. 
+1. Download the knowledge graph and node labels files from [Zenodo](#) and add to local folder - resources/knowledge_graphs. NP-KG is available as NetworkX multidigraph (gpickle files) and triples (ntriples files).
 
-NP-KG is available as NetworkX multidigraph (gpickle files) and triples (ntriples files). See [evaluation-scripts](https://github.com/sanyabt/np-kg/tree/main/evaluation-scripts) for examples of queries and path searches.
+* **Merged KG:** includes merged PheKnowLator KG and literature-based graph. Download this if you do not know which KG to use.
+	* Filename: _PheKnowLator_machine_read_merged_instance_based_OWLNETS_v1.0.gpickle_
+* **PheKnowLator KG:** includes full instance-based build of the PheKnowLator KG + additional data sources listed [here]([https://github.com/sanyabt/np-kg/wiki](https://github.com/sanyabt/np-kg/wiki)). See [PheKnowLator](https://github.com/callahantiff/PheKnowLator) for more details.
+	* Filename: _PheKnowLator_v3.0.0_full_instance_inverseRelations_OWLNETS_NetworkxMultiDiGraph.gpickle_
+* **Literature-based graph:** includes all nodes and edges extracted from full texts of green tea and kratom literature and inferred edges.
+	* Filename: _machine_read_merged_with_closure_v1.0.pickle_
+* **Node Labels:** pickle file with all node labels for the merged KG.
+	* Filename: _nodeLabels_v1.0.pickle_
 
-* Merged KG: includes merged PheKnowLator KG and literature-based graph. Download this if you do not know which KG to use.
-	* Filename: PheKnowLator_machine_read_merged_instance_based_OWLNETS_v1.0.gpickle
-* PheKnowLator KG: includes full instance-based build of the PheKnowLator KG + additional data sources listed [here]([https://github.com/sanyabt/np-kg/wiki](https://github.com/sanyabt/np-kg/wiki)). See [PheKnowLator](https://github.com/callahantiff/PheKnowLator) for more details.
-	* Filename: PheKnowLator_v3.0.0_full_instance_inverseRelations_OWLNETS_NetworkxMultiDiGraph.gpickle
-* Literature-based graph: includes all nodes and edges extracted from full texts of green tea and kratom literature and inferred edges.
-	* Filename: machine_read_merged_with_closure_v1.0.pickle
-* Node Labels - pickle file with all node labels for the merged KG.
-* Filename: nodeLabels_v1.0.pickle
+2. See [evaluation-scripts](https://github.com/sanyabt/np-kg/tree/main/evaluation-scripts) for examples of queries and path searches.
 
-
-Note: The download link also contains the KGs as ntriples files with the same nodes and edges.
+Note: The download link also contains the KGs as ntriples files with the same nodes and edges that can be loaded for other applications.
 
 
 ### If you are interested in constructing or extending NP-KG
