@@ -27,9 +27,9 @@ python -m pip install -r requirements.txt
 
 ### If you want to use the pre-built KGs
 
-1. Download the knowledge graph and node labels files from [Zenodo](#) and add to local folder - resources/knowledge_graphs. NP-KG is available as NetworkX multidigraph (gpickle files) and triples (ntriples files).
+1. [Download the knowledge graph and node labels files from Zenodo](https://doi.org/10.5281/zenodo.6814508) and add to local folder - resources/knowledge_graphs. NP-KG is available as NetworkX multidigraph (gpickle files) and triples (ntriples files).
 
-* **Merged KG:** includes merged PheKnowLator KG and literature-based graph. Download this if you do not know which KG to use.
+* **Merged KG:** includes merged PheKnowLator KG and literature-based graph. Download this file if you do not know which KG to use.
 	* Filename: _PheKnowLator_machine_read_merged_instance_based_OWLNETS_v1.0.gpickle_
 * **PheKnowLator KG:** includes full instance-based build of the PheKnowLator KG + additional data sources listed [here]([https://github.com/sanyabt/np-kg/wiki](https://github.com/sanyabt/np-kg/wiki)). See [PheKnowLator](https://github.com/callahantiff/PheKnowLator) for more details.
 	* Filename: _PheKnowLator_v3.0.0_full_instance_inverseRelations_OWLNETS_NetworkxMultiDiGraph.gpickle_
@@ -63,5 +63,6 @@ Taneja SB, Ndungu PW, Paine MF, Kane-Gill SL, Boyce RD. Relation Extraction from
 **ISMB Conference Abstract and Related Files**
 
 Taneja SB, Callahan TJ, Brochhausen M, Paine MF, Kane-Gill SL, Boyce RD. Designing potential extensions from G-SRS to ChEBI to identify natural product-drug interactions. Intelligent Systems for Molecular Biology/European Conference on Computational Biology (ISMB/ECCB), 2021. [https://doi.org/10.5281/zenodo.5736386](https://doi.org/10.5281/zenodo.5736386)
+
 
 This work is supported by the National Institutes of Health National Center for Complementary and Integrative Health Grant U54 AT008909.
