@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6814508.svg)](https://doi.org/10.5281/zenodo.6814508)
+
 # NP-KG
 
 **Knowledge Graph Framework to Generate Hypotheses for Natural Product-Drug Interactions**
@@ -64,5 +66,26 @@ Taneja SB, Ndungu PW, Paine MF, Kane-Gill SL, Boyce RD. Relation Extraction from
 
 Taneja SB, Callahan TJ, Brochhausen M, Paine MF, Kane-Gill SL, Boyce RD. Designing potential extensions from G-SRS to ChEBI to identify natural product-drug interactions. Intelligent Systems for Molecular Biology/European Conference on Computational Biology (ISMB/ECCB), 2021. [https://doi.org/10.5281/zenodo.5736386](https://doi.org/10.5281/zenodo.5736386)
 
+
+Cite this Work
+------------------------------------------------
+**Zenodo**
+
+```
+@dataset{taneja_sanya_bathla_2022_6814508,
+  author       = {Taneja, Sanya Bathla},
+  title        = {{NP-KG: Knowledge Graph Framework for Natural 
+                   Product-Drug Interactions}},
+  month        = aug,
+  year         = 2022,
+  note         = {{Supporting Grant - National Institutes of Health 
+                   National Center for Complementary and Integrative
+                   Health Grant U54 AT008909}},
+  publisher    = {Zenodo},
+  version      = {v1.0.0},
+  doi          = {10.5281/zenodo.6814508},
+  url          = {https://doi.org/10.5281/zenodo.6814508}
+}
+```
 
 This work is supported by the National Institutes of Health National Center for Complementary and Integrative Health Grant U54 AT008909.
