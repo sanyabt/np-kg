@@ -33,7 +33,7 @@ python -m pip install -r requirements.txt
 
 * **Merged KG:** includes merged PheKnowLator KG and literature-based graph. Download this file if you do not know which KG to use.
 	* Filename: _PheKnowLator_machine_read_merged_instance_based_OWLNETS_v1.0.gpickle_
-* **PheKnowLator KG:** includes full instance-based build of the PheKnowLator KG + additional data sources listed [here]([https://github.com/sanyabt/np-kg/wiki](https://github.com/sanyabt/np-kg/wiki)). See [PheKnowLator](https://github.com/callahantiff/PheKnowLator) for more details.
+* **PheKnowLator KG:** includes full instance-based build of the PheKnowLator KG. See [PheKnowLator](https://github.com/callahantiff/PheKnowLator) for more details.
 	* Filename: _PheKnowLator_v3.0.0_full_instance_inverseRelations_OWLNETS_NetworkxMultiDiGraph.gpickle_
 * **Literature-based graph:** includes all nodes and edges extracted from full texts of green tea and kratom literature and inferred edges.
 	* Filename: _machine_read_merged_with_closure_v1.0.pickle_

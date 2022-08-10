@@ -1,19 +1,19 @@
 abydos==0.5.0
 alabaster==0.7.12
-anyio @ file:///tmp/build/80754af9/anyio_1617783279600/work/dist
-argon2-cffi @ file:///tmp/build/80754af9/argon2-cffi_1613037492802/work
+anyio==2.2.0
+argon2-cffi==20.1.0
 async-generator==1.10
-attrs @ file:///tmp/build/80754af9/attrs_1620827162558/work
-Babel @ file:///tmp/build/80754af9/babel_1620871417480/work
-backcall @ file:///home/ktietz/src/ci/backcall_1611930011877/work
-bleach @ file:///tmp/build/80754af9/bleach_1628110601003/work
+attrs==21.2.0
+Babel==2.9.1
+backcall==0.2.0
+bleach==4.0.0
 bottle==0.12.19
 brotlipy==0.7.0
 cache-decorator==2.1.6
 cachetools==4.2.4
 certifi==2021.5.30
-cffi @ file:///tmp/build/80754af9/cffi_1625814693874/work
-charset-normalizer @ file:///tmp/build/80754af9/charset-normalizer_1630003229654/work
+cffi==1.14.6
+charset-normalizer==2.0.4
 click==8.0.1
 clips==1.1.0
 clipspy==1.0.0
@@ -21,14 +21,14 @@ commonmark==0.9.1
 compress-json==1.0.7
 compress-pickle==2.1.0
 contextvars==2.4
-cryptography @ file:///tmp/build/80754af9/cryptography_1616769282133/work
+cryptography==3.4.7
 cycler==0.10.0
 Cython==0.29.24
-dataclasses @ file:///tmp/build/80754af9/dataclasses_1614363715916/work
+dataclasses==0.8
 ddd-subplots==1.0.19
 decorator==4.4.2
 deflate-dict==1.0.9
-defusedxml @ file:///tmp/build/80754af9/defusedxml_1615228127516/work
+defusedxml==0.7.1
 dict-hash==1.1.24
 docutils==0.16
 downloaders==1.0.15
@@ -51,105 +51,113 @@ grape==0.0.5
 grpcio==1.40.0
 huggingface-hub==0.4.0
 humanize==3.14.0
-idna @ file:///tmp/build/80754af9/idna_1622654382723/work
+idna==3.2
 imageio==2.15.0
 imagesize==1.2.0
-immutables @ file:///tmp/build/80754af9/immutables_1628888996840/work
-importlib-metadata @ file:///tmp/build/80754af9/importlib-metadata_1617877310517/work
+immutables==0.16
+importlib-metadata==3.10.0
 iniconfig==1.1.1
 IPy==1.1
-ipykernel @ file:///tmp/build/80754af9/ipykernel_1596206602906/work/dist/ipykernel-5.3.4-py3-none-any.whl
-ipython @ file:///tmp/build/80754af9/ipython_1593447367857/work
-ipython-genutils @ file:///tmp/build/80754af9/ipython_genutils_1606773439826/work
+ipykernel==5.3.4
+ipython==7.16.1
+ipython-genutils==0.2.0
+ipywidgets==7.7.1
 isodate==0.6.0
 jaro-winkler==2.0.0
 jedi==0.17.0
 jellyfish==0.8.8
-Jinja2 @ file:///tmp/build/80754af9/jinja2_1624781299557/work
-joblib @ file:///tmp/build/80754af9/joblib_1613502643832/work
-json5 @ file:///tmp/build/80754af9/json5_1624432770122/work
-jsonschema @ file:///Users/ktietz/demo/mc3/conda-bld/jsonschema_1630511932244/work
-jupyter-client @ file:///tmp/build/80754af9/jupyter_client_1630690655192/work
-jupyter-core @ file:///tmp/build/80754af9/jupyter_core_1612213308682/work
-jupyter-server @ file:///tmp/build/80754af9/jupyter_server_1616083640409/work
-jupyterlab @ file:///tmp/build/80754af9/jupyterlab_1629124491270/work
-jupyterlab-pygments @ file:///tmp/build/80754af9/jupyterlab_pygments_1601490720602/work
-jupyterlab-server @ file:///tmp/build/80754af9/jupyterlab_server_1629763241507/work
+Jinja2==3.0.1
+joblib==1.0.1
+json5==0.9.6
+jsonschema==3.2.0
+jupyter==1.0.0
+jupyter-client==7.0.1
+jupyter-console==6.4.3
+jupyter-core==4.7.1
+jupyter-server==1.4.1
+jupyterlab==3.1.7
+jupyterlab-pygments==0.1.2
+jupyterlab-server==2.7.2
+jupyterlab-widgets==1.1.1
 keras-mixed-sequence==1.0.28
-kiwisolver @ file:///tmp/build/80754af9/kiwisolver_1612282412546/work
+kiwisolver==1.3.1
 lxml==4.6.3
-MarkupSafe @ file:///tmp/build/80754af9/markupsafe_1621528150516/work
-matplotlib @ file:///tmp/build/80754af9/matplotlib-suite_1613407855456/work
+MarkupSafe==2.0.1
+matplotlib==3.3.4
 mistune==0.8.4
 mkl-fft==1.3.0
 mkl-random==1.1.1
 mkl-service==2.3.0
 more-itertools==8.9.0
 msgpack==1.0.2
-nbclassic @ file:///tmp/build/80754af9/nbclassic_1616085367084/work
-nbclient @ file:///tmp/build/80754af9/nbclient_1614364831625/work
-nbconvert @ file:///tmp/build/80754af9/nbconvert_1601914804165/work
-nbformat @ file:///tmp/build/80754af9/nbformat_1617383369282/work
-nest-asyncio @ file:///tmp/build/80754af9/nest-asyncio_1613680548246/work
+nbclassic==0.2.6
+nbclient==0.5.3
+nbconvert==6.0.7
+nbformat==5.1.3
+nest-asyncio==1.5.1
 networkx==2.5.1
 nltk==3.6.2
-notebook @ file:///tmp/build/80754af9/notebook_1629197205351/work
-numpy @ file:///tmp/build/80754af9/numpy_and_numpy_base_1603487797006/work
-OGER @ git+https://github.com/OntoGene/OGER.git@f23cf9bec70ba51f85605f26f3de2df72f7c4d5a
+notebook==6.4.3
+numpy==1.19.2
+OGER==1.5
 olefile==0.46
 ontoRunNER==0.0.1
 opencv-python==4.6.0.66
 openpyxl==3.0.7
 Owlready2==0.34
-packaging @ file:///tmp/build/80754af9/packaging_1625611678980/work
+packaging==21.0
 pandas==1.1.5
-pandocfilters @ file:///tmp/build/80754af9/pandocfilters_1605120937332/work
-parso @ file:///tmp/build/80754af9/parso_1617223946239/work
-pexpect @ file:///tmp/build/80754af9/pexpect_1605563209008/work
-pickleshare @ file:///tmp/build/80754af9/pickleshare_1606932040724/work
+pandocfilters==1.4.3
+parso==0.8.2
+pexpect==4.8.0
+pickleshare==0.7.5
 Pillow==8.4.0
+pip==21.3.1
 pluggy==1.0.0
-prometheus-client @ file:///tmp/build/80754af9/prometheus_client_1623189609245/work
-prompt-toolkit @ file:///Users/ktietz/demo/mc3/conda-bld/prompt-toolkit_1629146841569/work
+prometheus-client==0.11.0
+prompt-toolkit==3.0.17
 protobuf==3.17.3
 psutil==5.8.0
-ptyprocess @ file:///tmp/build/80754af9/ptyprocess_1609355006118/work/dist/ptyprocess-0.7.0-py2.py3-none-any.whl
+ptyprocess==0.7.0
 py==1.10.0
 py-cpuinfo==8.0.0
 pyasn1==0.4.8
 pyasn1-modules==0.2.8
-pycparser @ file:///tmp/build/80754af9/pycparser_1594388511720/work
+pycparser==2.20
 pygifsicle==1.0.5
-Pygments @ file:///tmp/build/80754af9/pygments_1629234116488/work
-pyOpenSSL @ file:///tmp/build/80754af9/pyopenssl_1608057966937/work
-pyparsing @ file:///home/linux1/recipes/ci/pyparsing_1610983426697/work
-pyrsistent @ file:///tmp/build/80754af9/pyrsistent_1600141725711/work
-PySocks @ file:///tmp/build/80754af9/pysocks_1605305763431/work
+Pygments==2.10.0
+pyOpenSSL==20.0.1
+pyparsing==2.4.7
+pyrsistent==0.17.3
+PySocks==1.7.1
 pytest==6.2.5
-python-dateutil @ file:///tmp/build/80754af9/python-dateutil_1626374649649/work
+python-dateutil==2.8.2
 python-json-logger==2.0.2
 python-Levenshtein==0.12.2
-pytz @ file:///tmp/build/80754af9/pytz_1612215392582/work
+pytz==2021.1
 pyxDamerauLevenshtein==1.7.0
 PyYAML==5.4.1
-pyzmq @ file:///tmp/build/80754af9/pyzmq_1628268400816/work
+pyzmq==22.2.1
+qtconsole==5.2.2
+QtPy==2.0.1
 ray==1.6.0
 rdflib==5.0.0
 reactome2py==3.0.0
 recommonmark==0.7.1
 redis==3.5.3
 regex==2021.10.8
-requests @ file:///tmp/build/80754af9/requests_1629994808627/work
+requests==2.26.0
 responses==0.10.12
 rsa==4.7.2
 sacremoses==0.0.53
 sanitize-ml-labels==1.0.42
-scikit-learn @ file:///tmp/build/80754af9/scikit-learn_1621365798935/work
-scipy @ file:///tmp/build/80754af9/scipy_1597686625380/work
-Send2Trash @ file:///tmp/build/80754af9/send2trash_1607525499227/work
-six @ file:///tmp/build/80754af9/six_1623709665295/work
+scikit-learn==0.24.2
+scipy==1.5.2
+Send2Trash==1.5.0
+setuptools==52.0.0.post20210125
+six==1.16.0
 sklearn==0.0
-sniffio @ file:///tmp/build/80754af9/sniffio_1614030473084/work
+sniffio==1.2.0
 snowballstemmer==2.1.0
 Sphinx==4.2.0
 sphinx-rtd-theme==1.0.0
@@ -160,23 +168,25 @@ sphinxcontrib-jsmath==1.0.1
 sphinxcontrib-qthelp==1.0.3
 sphinxcontrib-serializinghtml==1.1.5
 terminado==0.9.4
-testpath @ file:///tmp/build/80754af9/testpath_1624638946665/work
+testpath==0.5.0
 textdistance==4.2.1
-threadpoolctl @ file:///Users/ktietz/demo/mc3/conda-bld/threadpoolctl_1629802263681/work
+threadpoolctl==2.2.0
 tokenizers==0.12.1
 toml==0.10.2
-tornado @ file:///tmp/build/80754af9/tornado_1606942266872/work
+tornado==6.1
 tox-docker==0.0.0
 tqdm==4.62.2
 traitlets==4.3.3
 transformers==4.18.0
-typing-extensions @ file:///tmp/build/80754af9/typing_extensions_1624965014186/work
-urllib3 @ file:///tmp/build/80754af9/urllib3_1625084269274/work
+typing-extensions==3.10.0.0
+urllib3==1.26.6
 userinput==1.0.17
 validate-email==1.3
 validate-version-code==1.0.4
 validators==0.18.2
-wcwidth @ file:///Users/ktietz/demo/mc3/conda-bld/wcwidth_1629357192024/work
+wcwidth==0.2.5
 webencodings==0.5.1
+wheel==0.37.0
+widgetsnbextension==3.6.1
 xlrd==2.0.1
-zipp @ file:///tmp/build/80754af9/zipp_1625570634446/work
+zipp==3.5.0
