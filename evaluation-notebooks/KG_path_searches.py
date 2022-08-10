@@ -33,8 +33,12 @@ combine_graph = True
 KG_PATH = '../resources/knowledge_graphs/'
 KG_NAME = 'PheKnowLator_machine_read_merged_instance_based_OWLNETS_v1.0.gpickle'
 
-NodeLabelsFile = '../resources/nodeLabels_20211021.pickle'
+NodeLabelsFile = '../resources/nodeLabels_v1.0.pickle'
 DIR_OUT = '../output_files/'
+
+#read nodeLabels dictionary
+with open(NodeLabelsFile, 'rb') as filep:
+	nodeLabels = pickle.load(filep)
 
 #define namespaces
 obo = Namespace('http://purl.obolibrary.org/obo/')
