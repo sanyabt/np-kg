@@ -12,8 +12,6 @@ import pickle
 import pandas as pd
 import numpy as np
 import sys
-sys.path.append('../')
-from pkt_kg.utils import *
 import KG_path_searches
 
 combine_graph = False

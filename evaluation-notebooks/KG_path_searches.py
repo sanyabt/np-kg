@@ -26,10 +26,7 @@ from tqdm import tqdm
 import pickle
 import pandas as pd
 import numpy as np
-#import pheknowlator kg_utils 
 import sys
-sys.path.append('../')
-from pkt_kg.utils import *
 
 combine_graph = True
 #change graph names and paths
@@ -54,10 +51,6 @@ node_dict = {
 
 nodes_to_filter = [obo.CHEBI_24431, obo.CHEBI_25367, obo.SO_0000704, obo.PR_000029067, obo.PR_000000001, obo.GO_0008152, obo.SO_0000673,
 					URIRef('https://reactome.org/content/detail/R-HSA-1643685'), URIRef('https://reactome.org/content/detail/R-HSA-1430728')]
-
-#read nodeLabels dictionary
-with open(NodeLabelsFile, 'rb') as filep:
-	nodeLabels = pickle.load(filep)
 
 def save_k_single_source_shortest_paths(G, source, k, filepath):
 	paths = nx.single_source_shortest_path(G, source)
