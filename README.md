@@ -21,7 +21,7 @@ NP-KG is a graph framework that creates a biomedical knowledge graph (KG) to ide
 ### Setup environment
 
 1. Clone the repository or download all files.
-2. Install all required packages. Requires Python==3.6 or above.
+2. Install all required packages. Requires Python>=3.6.
 
 ```
 python -m pip install -r requirements.txt
@@ -37,8 +37,9 @@ python -m pip install -r requirements.txt
 	* Filename: _PheKnowLator_v3.0.0_full_instance_inverseRelations_OWLNETS_NetworkxMultiDiGraph.gpickle_
 * **Literature-based graph:** includes all nodes and edges extracted from full texts of green tea and kratom literature and inferred edges.
 	* Filename: _machine_read_merged_with_closure_v1.0.pickle_
-* **Node Labels:** pickle file with all node labels for the merged KG.
-	* Filename: _nodeLabels_v1.0.pickle_
+
+### Node Labels
+* Download _nodeLabels_v1.0.pickle_ file with all node labels for the merged KG.
 
 2. See [evaluation-scripts](https://github.com/sanyabt/np-kg/tree/main/evaluation-scripts) for examples of queries and path searches.
 
