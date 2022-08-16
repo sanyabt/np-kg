@@ -33,7 +33,7 @@ combine_graph = True
 KG_PATH = '../resources/knowledge_graphs/'
 KG_NAME = 'PheKnowLator_machine_read_merged_instance_based_OWLNETS_v1.0.gpickle'
 
-NodeLabelsFile = '../resources/nodeLabels_v1.0.pickle'
+NodeLabelsFile = KG_PATH + 'nodeLabels_v1.0.pickle'
 DIR_OUT = '../output_files/'
 
 #read nodeLabels dictionary
