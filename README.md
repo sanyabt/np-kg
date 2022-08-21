@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6814508.svg)](https://doi.org/10.5281/zenodo.6814508)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7011488.svg)](https://doi.org/10.5281/zenodo.7011488)
 
 # NP-KG
 
@@ -29,7 +29,7 @@ python -m pip install -r requirements.txt
 
 ### If you want to use the pre-built KGs
 
-1. [Download the knowledge graph and node labels files from Zenodo](https://doi.org/10.5281/zenodo.6814508) and add to local folder - resources/knowledge_graphs. NP-KG is available as NetworkX multidigraph (gpickle files) and triples (ntriples files).
+1. [Download the knowledge graph and node labels files from Zenodo](https://doi.org/10.5281/zenodo.7011488) and add to local folder - resources/knowledge_graphs. NP-KG is available as NetworkX multidigraph (gpickle files) and triples (ntriples files).
 
 * **Merged KG:** includes merged PheKnowLator KG and literature-based graph. Download this file if you do not know which KG to use.
 	* Filename: _PheKnowLator_machine_read_merged_instance_based_OWLNETS_v1.0.gpickle_
