@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7011488.svg)](https://doi.org/10.5281/zenodo.7011488)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6814507.svg)](https://doi.org/10.5281/zenodo.6814507)
 
 # NP-KG
 
@@ -73,7 +73,7 @@ Cite this Work
 **Zenodo**
 
 ```
-@dataset{taneja_sanya_bathla_2022_6814508,
+@dataset{taneja_sanya_bathla_2022_6814507,
   author       = {Taneja, Sanya Bathla},
   title        = {{NP-KG: Knowledge Graph Framework for Natural 
                    Product-Drug Interactions}},
@@ -83,9 +83,8 @@ Cite this Work
                    National Center for Complementary and Integrative
                    Health Grant U54 AT008909}},
   publisher    = {Zenodo},
-  version      = {v1.0.0},
-  doi          = {10.5281/zenodo.6814508},
-  url          = {https://doi.org/10.5281/zenodo.6814508}
+  doi          = {10.5281/zenodo.6814507},
+  url          = {https://doi.org/10.5281/zenodo.6814507}
 }
 ```
 
