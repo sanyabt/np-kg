@@ -32,19 +32,29 @@ python -m pip install -r requirements.txt
 1. [Download the knowledge graph and node labels files from Zenodo](https://doi.org/10.5281/zenodo.6814507) and add to local folder - resources/knowledge_graphs. NP-KG is available as NetworkX multidigraph (gpickle files) and triples (ntriples files).
 
 * **Merged KG:** includes merged PheKnowLator KG and literature-based graph. Download this file if you do not know which KG to use.
-	* Filename: _PheKnowLator_machine_read_merged_instance_based_OWLNETS_v1.0.gpickle_
+	* Filename: _PheKnowLator_machine_read_merged_instance_based_OWLNETS_v1.0.1.tsv_
 * **PheKnowLator KG:** includes full instance-based build of the PheKnowLator KG. See [PheKnowLator](https://github.com/callahantiff/PheKnowLator) for more details.
 	* Filename: _PheKnowLator_v3.0.0_full_instance_inverseRelations_OWLNETS_NetworkxMultiDiGraph.gpickle_
 * **Literature-based graph:** includes all nodes and edges extracted from full texts of green tea and kratom literature and inferred edges.
 	* Filename: _machine_read_merged_with_closure_v1.0.pickle_
 
 ### Node Labels
-* Download _nodeLabels_v1.0.pickle_ file with all node labels for the merged KG.
+* Download _nodeLabels_v1.0.1.tsv_ file with all node labels for the merged KG.
 
 2. See [evaluation-scripts](https://github.com/sanyabt/np-kg/tree/main/evaluation-scripts) for examples of queries and path searches.
 
-Note: The download link also contains the KGs as ntriples files with the same nodes and edges that can be loaded for other applications.
+Note: The download link also contains the KGs as gpickle and ntriples files with the same nodes and edges that can be loaded for other applications.
 
+### Loading NP-KG with GRAPE
+
+NP-KG can also be loaded with the Graph Representation Learning library [GRAPE]((https://github.com/AnacletoLAB/grape) for embedding and knowledge graph applications as below. See [NP-KG Grape Animation tutorial](https://github.com/sanyabt/np-kg/blob/main/resources/NPKG-Grape-Animation.ipynb) for example.
+
+```
+pip install grape -U
+from grape.datasets.zenodo import NPKG
+graph = NPKG(directed=True)
+graph
+```
 
 ### If you are interested in constructing or extending NP-KG
 
