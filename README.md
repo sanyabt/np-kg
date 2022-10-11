@@ -47,9 +47,9 @@ Note: The download link also contains the KGs as gpickle and ntriples files with
 
 ### Loading NP-KG with GRAPE
 
-NP-KG can also be loaded with the Graph Representation Learning library [GRAPE]((https://github.com/AnacletoLAB/grape) for embedding and knowledge graph applications as below. See [NP-KG Grape Animation tutorial](https://github.com/sanyabt/np-kg/blob/main/resources/NPKG-Grape-Animation.ipynb) for example.
+NP-KG can also be loaded with the Graph Representation Learning library [GRAPE](https://github.com/AnacletoLAB/grape) for embedding and knowledge graph applications as below. See [NP-KG Grape Animation tutorial](https://github.com/sanyabt/np-kg/blob/main/resources/NPKG-Grape-Animation.ipynb) for example.
 
-```
+```python
 pip install grape -U
 from grape.datasets.zenodo import NPKG
 graph = NPKG(directed=True)
