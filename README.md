@@ -12,7 +12,7 @@ NP-KG is a graph framework that creates a biomedical knowledge graph (KG) to ide
 
 **NP-KG:** Merged PheKnowLator KG and literature-based graph with green tea and kratom literature.
 
-**Ontology-grounded KG:** PheKnowLator KG with a few [additional data sources](#).
+**Ontology-grounded KG:** PheKnowLator KG with a few [additional data sources](https://github.com/sanyabt/np-kg/wiki/v1.0.0#data-sources).
 
 **Literature-based Graph:** Literature-based graph constructed from green tea and kratom literature with relation extraction systems (SemRep and INDRA/REACH) and closure operations.
 
