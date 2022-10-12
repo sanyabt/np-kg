@@ -29,10 +29,11 @@ python -m pip install -r requirements.txt
 
 ### If you want to use the pre-built KGs
 
-1. [Download the knowledge graph and node labels files from Zenodo](https://doi.org/10.5281/zenodo.6814507) and add to local folder - resources/knowledge_graphs. NP-KG is available as NetworkX multidigraph (gpickle files) and triples (ntriples files).
+1. [Download the knowledge graph and node labels files from Zenodo](https://doi.org/10.5281/zenodo.6814507) and add to local folder - resources/knowledge_graphs. NP-KG is available as TSV file with triples and NetworkX multidigraph (gpickle files).
 
 * **Merged KG:** includes merged PheKnowLator KG and literature-based graph. Download this file if you do not know which KG to use.
 	* Filename: _PheKnowLator_machine_read_merged_instance_based_OWLNETS_v1.0.1.tsv_
+	* Filename: _PheKnowLator_machine_read_merged_instance_based_OWLNETS_v1.0.1.gpickle_
 * **PheKnowLator KG:** includes full instance-based build of the PheKnowLator KG. See [PheKnowLator](https://github.com/callahantiff/PheKnowLator) for more details.
 	* Filename: _PheKnowLator_v3.0.0_full_instance_inverseRelations_OWLNETS_NetworkxMultiDiGraph.gpickle_
 * **Literature-based graph:** includes all nodes and edges extracted from full texts of green tea and kratom literature and inferred edges.
@@ -47,7 +48,7 @@ Note: The download link also contains the KGs as gpickle and ntriples files with
 
 ### Loading NP-KG with GRAPE
 
-NP-KG can also be loaded with the Graph Representation Learning library [GRAPE](https://github.com/AnacletoLAB/grape) for embedding and knowledge graph applications as below. See [NP-KG Grape Animation tutorial](https://github.com/sanyabt/np-kg/blob/main/resources/NPKG-Grape-Animation.ipynb) for example.
+NP-KG can also be loaded with the Graph Representation Learning library [GRAPE](https://github.com/AnacletoLAB/grape) as below. See [NP-KG Grape Animation tutorial](https://github.com/sanyabt/np-kg/blob/main/resources/NPKG-Grape-Animation.ipynb) for details.
 
 ```python
 pip install grape -U
