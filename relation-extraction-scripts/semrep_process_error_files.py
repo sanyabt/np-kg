@@ -81,11 +81,17 @@ def semrep_extract(filepath):
 		}
 		with open(filepath+file, 'r', errors='ignore') as file_sem:
 			lines = file_sem.readlines()
+		
+		last_non_empty = ''
+
 		for item in lines:
-			if '|||' in item:
+			if '|relation|' in item:
 				sem_relations['items'].append(item)
-				line_no = lines.index(item)
-				sem_relations['source_sentence'].append(lines[line_no-2])
+				sem_relations['source_sentence'].append(last_non_empty)
+			elif item == '\n' or item == '':
+				continue
+			else:
+				last_non_empty = item
 		
 		count_dict['n_statements'] += len(sem_relations)
 		for rel in sem_relations['items']:
