@@ -16,7 +16,7 @@ workingDir = os.getcwd()
 log_dir = workingDir + '/logs/'
 utf_path = 'replace_utf8.jar'
 
-np = []
+np = ['kratom']
 
 extraction = True
 
@@ -33,6 +33,10 @@ start_pmid = int(sys.argv[1])
 end_pmid = int(sys.argv[2])
 
 pub_year_to_pmid_map = {}
+pub_type_to_pmid_map = {}
+
+section_tags = ['<ABSTRACT>', '<INTRODUCTION>', '<BACKGROUND>', '<METHODS>', '<RESULT>', '<RESULTS>', '<DISCUSSION>', 
+	'<CONCLUSION>', '<CONCLUSIONS>']
 
 def read_and_write_file(file, filepath_in, filepath_out):
 	filepath = filepath_in+file
@@ -66,15 +70,18 @@ def process_with_semrep(infile, outfile):
 		logging.info('SemRep error in processing %s', str(e))
 		return None
 
-def get_publication_year(pmid):
+def get_publication_year_and_type(pmid):
+	pub_year = ''
+	pub_type = ''
 	if pmid == '':
-		return ''
-	if pmid in pub_year_to_pmid_map:
+		return pub_year, pub_type
+	if pmid in pub_year_to_pmid_map and pmid in pub_type_to_pmid_map:
 		if pub_year_to_pmid_map[pmid] != '':
-			return pub_year_to_pmid_map[pmid]
+			pub_year = pub_year_to_pmid_map[pmid]
+			pub_type = pub_type_to_pmid_map[pmid]
+			return pub_year, str(pub_type)
 	time.sleep(5)
 	uri = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esummary.fcgi?db=pubmed&id="+pmid+"&retmode=json"
-	pub_year = ''
 	response = requests.get(uri)
 	if response.status_code == 429:
 		time.sleep(5)
@@ -83,7 +90,10 @@ def get_publication_year(pmid):
 		result = response.json()
 		pub_year = result['result'][pmid]['pubdate']
 		pub_year_to_pmid_map[pmid] = pub_year
-	return pub_year
+
+		pub_type = result['result'][pmid]['pubtype']
+		pub_type_to_pmid_map[pmid] = pub_type
+	return pub_year, str(pub_type)
 
 ###counting of statements is incorrect and being done per file not all - last reported is for the file not the entire set in count dict or log
 def semrep_extract(filepath):
@@ -98,7 +108,9 @@ def semrep_extract(filepath):
 		'object_name': [],
 		'subject_type': [],
 		'object_type': [],
-		'sentence': []
+		'sentence': [],
+		'source_section': [],
+		'pub_type': []
 	}
 	index = 0
 	semrep_files = os.listdir(filepath)
@@ -106,27 +118,34 @@ def semrep_extract(filepath):
 		pmid = file.split('.')[0]
 		sem_relations = {
 			'items': [],
-			'source_sentence': []
+			'source_sentence': [],
+			'source_section': []
 		}
 		with open(filepath+file, 'r', errors='ignore') as file_sem:
 			lines = file_sem.readlines()
 		
 		last_non_empty = ''
-
+		section_match = ''
 		for item in lines:
+			if any(s in item for s in section_tags):
+				#assign section
+				section_match = next((sec for sec in section_tags if sec in item), False)
 			if '|relation|' in item:
 				sem_relations['items'].append(item)
 				sem_relations['source_sentence'].append(last_non_empty)
+				sem_relations['source_section'].append(section_match)
 			elif item == '\n' or item == '':
 				continue
 			else:
 				last_non_empty = item
-		
+			
 		count_dict['n_statements'] += len(sem_relations)
 		for rel in sem_relations['items']:
+			fields = rel.split('|')
+			if len(fields) < 5:
+				continue
 			result_dict['index'].append(index)
 			result_dict['pmid'].append(pmid)
-			fields = rel.split('|')
 			result_dict['subject_cui'].append(fields[2])
 			result_dict['object_cui'].append(fields[9])
 			result_dict['subject_name'].append(fields[3])
@@ -134,10 +153,12 @@ def semrep_extract(filepath):
 			result_dict['relation'].append(fields[8])
 			result_dict['subject_type'].append(fields[4])
 			result_dict['object_type'].append(fields[11])
-			pub_year = get_publication_year(pmid)
+			pub_year, pub_type = get_publication_year_and_type(pmid)
 			result_dict['year'].append(pub_year)
+			result_dict['pub_type'].append(pub_type)
 			relation_index = sem_relations['items'].index(rel)
 			result_dict['sentence'].append(sem_relations['source_sentence'][relation_index])
+			result_dict['source_section'].append(sem_relations['source_section'][relation_index])
 			index += 1
 
 	return result_dict
@@ -199,7 +220,12 @@ if __name__ == '__main__':
 				file = file_alternate
 
 			if file in text_files:
-				filename = read_and_write_file(file, inputDirRaw, inputDir)
+				ascii_files = os.listdir(inputDir)
+				fileascii = file.split('_')[0]+'_ascii.txt'
+				if fileascii in ascii_files:
+					filename = inputDir+fileascii
+				else:
+					filename = read_and_write_file(file, inputDirRaw, inputDir)
 				if filename is not None:
 					semrep_process = process_with_semrep(filename, outputDir+file.split('_')[0]+'.txt')
 					if semrep_process is not None:
@@ -221,10 +247,10 @@ if __name__ == '__main__':
 
 		semrep_result = pd.DataFrame(result_dict)
 		semrep_result_unique = semrep_result.drop_duplicates(subset=['subject_cui', 'subject_name', 'subject_type',
-					'relation', 'object_cui', 'object_name', 'object_type', 'year', 'sentence'])
+					'relation', 'object_cui', 'object_name', 'object_type', 'year', 'sentence', 'source_section', 'pub_type'])
 		semrep_result_unique.to_csv(workingDir+'/output_files/'+item+'/' +item+'_pmid_all_predicates_semrep-'+str(start_pmid)+'-'+str(end_pmid)+'.tsv', sep='\t', index=False,
 					columns=['index', 'pmid', 'subject_cui', 'subject_name', 'subject_type',
-					'relation', 'object_cui', 'object_name', 'object_type', 'year', 'sentence'])
+					'relation', 'object_cui', 'object_name', 'object_type', 'year', 'sentence', 'source_section', 'pub_type'])
 
 		t1 = datetime.now()
 		seconds=timedelta.total_seconds(t1-t0)

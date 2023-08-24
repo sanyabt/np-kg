@@ -5,7 +5,7 @@ Author: Sanya B. Taneja
 '''
 import os, sys
 from pdf_to_text import read_PDF_file, process_PDF_file
-from indraREACH_extract import process_with_reach, get_text_from_pmid, run_assembly_pipeline
+from indraREACH_extract import process_with_reach, get_text_from_pmid, run_assembly_pipeline, process_with_reach_nxml
 from datetime import datetime, timedelta
 from indra.statements import stmts_to_json_file 
 
@@ -18,10 +18,18 @@ logging = True
 #True if running assembly pipeline on individual papers
 run_assembly = True
 
-start_line = int(sys.argv[1])
-end_line = int(sys.argv[2])
+#start_line = int(sys.argv[1])
+#end_line = int(sys.argv[2])
 
-NP = []
+NP = ['cranberry', 'valerian']
+
+#NP = ['cranberry',  'fenugreek',  'flaxseed', 'ginger', 'ginkgo', 'goldenseal',  'guarana', 'horsechestnut', 
+#'licorice', 'oregano',  'scrubpalmetto',  'valerian']
+
+#NP_new = ['ashwaganda', 'blackpepper', 'blackcohosh', 'cannabis', 'echinacea', 'feverfew', 'garlic', 'grapefruit', 'milkthistle',
+#		'panaxginseng', 'rhodiola', 'rosemary', 'soybean', 'hawthorn']
+
+pmid_list = []
 
 if __name__ == '__main__':
 	for item in NP:
@@ -46,8 +54,11 @@ if __name__ == '__main__':
 		stmts = []
 		#to track if pdf extract required for PMID
 		pdf_flag = True
-		for line_no in range(start_line, end_line):
-			pmid = pmids[line_no].strip()
+		for line in pmids:
+			pmid = line.strip()
+			if pmid in pmid_list:
+				continue
+			pmid_list.append(pmid)
 			count_dict['n_pmid'] += 1
 			log_file.write('\n\nPMID: '+pmid)
 			#check for  full text from PMC and get text
@@ -55,12 +66,19 @@ if __name__ == '__main__':
 
 			if text is not None:
 				#full text available in PMC
-				pmc_statements = process_with_reach(text, pmid, output_dir)
+				pmc_statements = process_with_reach_nxml(pmid, output_dir_xml, output_dir)
 				if pmc_statements is not None:
 					pdf_flag = False
 					count_dict['n_output_reach'] += 1
 					log_file.write('\nNumber of statements (PMC): '+str(len(pmc_statements)))
 					stmts += pmc_statements
+				else:
+					pmc_statements = process_with_reach(text, pmid, output_dir)
+					if pmc_statements is not None:
+						pdf_flag = False
+						count_dict['n_output_reach'] += 1
+						log_file.write('\nNumber of statements (PMC-text): '+str(len(pmc_statements)))
+						stmts += pmc_statements
 				
 			elif pdf_flag or text is None:
 				#check for PDF file and get text
@@ -88,16 +106,19 @@ if __name__ == '__main__':
 					else:
 						count_dict['n_error'] += 1
 						log_file.write('\nUnable to extract from PDF: '+pmid)
+						#process abstract in this case
 				
 				else:
 					log_file.write('\nPMC or PDF not available for PMID: '+pmid)
+					count_dict['n_error'] += 1
+					#process abstract in this case
 
 		if run_assembly:
 			stmts = run_assembly_pipeline(stmts)
-			outJSONFname = output_dir + str(start_line)+'_'+str(end_line-1)+'_reach_output_assembly.json'
+			outJSONFname = output_dir + item+ '_reach_output_assembly.json'
 		
 		else:
-			outJSONFname = output_dir + str(start_line)+'_'+str(end_line-1)+'_reach_output_no_assembly.json'
+			outJSONFname = output_dir + item +'_reach_output_no_assembly.json'
 		count_dict['n_statements'] = len(stmts)
 		print('Saving combined output:')
 		stmts_to_json_file(stmts, outJSONFname)
@@ -107,7 +128,7 @@ if __name__ == '__main__':
 			seconds=timedelta.total_seconds(t1-t0)
 			log_file.write('\nTotal time: '+ str(seconds)+' seconds')
 			log_file.write('\nInput file: '+file_i)
-			log_file.write('\nPMIDs: '+str(start_line)+' to '+str(end_line-1))
+			log_file.write('\nPMIDs: '+ str(len(pmids)))
 			log_file.write('\nN_pmid_hits: '+str(count_dict['n_pmid']))
 			log_file.write('\nN_pdf_hits: '+str(count_dict['n_pdf']))
 			log_file.write('\nN_reach_hits: '+str(count_dict['n_output_reach']))

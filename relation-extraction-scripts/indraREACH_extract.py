@@ -13,6 +13,7 @@ from indra.ontology.bio import bio_ontology
 import indra.tools.assemble_corpus as ac
 import pickle
 import xml.etree.ElementTree as ET
+import time
 
 #True if running assembly pipeline on individual papers
 run_assembly = True
@@ -30,6 +31,24 @@ def process_with_reach(text, pmid, output_dir):
 		return rp.statements
 	else:
 		return None
+
+def process_with_reach_nxml(pmid, output_dir_xml, output_dir):
+	nxml_file = output_dir_xml+pmid+'.nxml'
+	outFname = output_dir + pmid + '_reach.json'
+	file_o = open(output_dir + pmid + '_reach_statements.txt', 'w')
+	try:
+		rp = reach.process_nxml_file(nxml_file, citation=pmid, url='http://localhost:8000/api/uploadFile', output_fname=outFname)
+	except Exception as e:
+		print(e)
+		return None
+	print('Saving raw REACH output to file: ' + outFname)
+	if rp is not None:
+		for stmt in rp.statements:
+			file_o.write('\n'+ str(stmt))
+		return rp.statements
+	else:
+		return None
+
 
 #get xml string of article using indra.pmc_client from the PMCID
 def get_xml_from_pmcid(pmcid, pmid, dirOut_xml, dirOut_txt):
@@ -81,7 +100,14 @@ def run_assembly_pipeline(statements):
 
 def get_text_from_pmid(pmid, dirOut_xml, dirOut_txt):
 	xml_str = None
-	ids = pmc_client.id_lookup(pmid, idtype='pmid')
+	ids = ''
+	try:
+		ids = pmc_client.id_lookup(pmid, idtype='pmid')
+	except Exception as e:
+		time.sleep(5)
+		ids = pmc_client.id_lookup(pmid, idtype='pmid')
+	if 'pmcid' not in ids:
+		return None
 	pmcid = ids['pmcid']
 	if pmcid is not None:
 		xml_str = get_xml_from_pmcid(pmcid, pmid, dirOut_xml, dirOut_txt)

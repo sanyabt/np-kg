@@ -1,5 +1,6 @@
 '''
 Script to run NER on texts with MetaMap (installed locally)
+--last run for all NPs (N=28)
 '''
 from pymetamap import MetaMap
 import pickle
@@ -11,11 +12,12 @@ from indra.statements import stmts_from_json_file
 #create instance for metamap API, path from local file
 workingDir = os.getcwd()
 dir_out = workingDir + '/output_files/'
-file_reach = dir_out + 'filename'
+reachDir = dir_out + 'reach_mapping_files_NER/'
 dir_log = workingDir + '/logs/'
 mm = MetaMap.get_instance('/media/extension-1/UMLS/MetaMap/public_mm/bin/metamap')
 
-umls_dict = {}
+with open(dir_out+'umls_dict_20221128.pickle', 'rb') as file_i:
+		umls_dict = pickle.load(file_i)
 
 #make more sophisticated> currently takes the first MetaMap concept as highest score (same scores ignored)
 def extract_concepts_umls(entity, umls_count):
@@ -42,7 +44,12 @@ def extract_concepts_umls(entity, umls_count):
 if __name__ == '__main__':
 	umls_count = 0
 	reach_concepts = []
-	stmts = stmts_from_json_file(file_reach)
+	reach_files = os.listdir(reachDir)
+	stmts = []
+	for file in reach_files:
+		rpstmts = stmts_from_json_file(reachDir+file)
+		stmts += rpstmts
+	print(len(stmts))
 	for item in stmts:
 		agents_list = item.agent_list()
 		for agent in agents_list:
@@ -62,17 +69,16 @@ if __name__ == '__main__':
 	print(len(concepts_list))
 	index = 0
 	for concept in concepts_list:
-		umls_count = extract_concepts_umls(str(concept), umls_count)
-		index += 1
+		if concept not in umls_dict:
+			umls_count = extract_concepts_umls(str(concept), umls_count)
+			index += 1
 		if index%1000 == 0:
 			print(index)
 	total_count = len(concepts_list)
 
 	#save dictionaries to pickle files
-	with open(dir_out+'umls_dict_20220218.pickle', 'wb') as file_o:
+	with open(dir_out+'umls_dict_20230321.pickle', 'wb') as file_o:
 		pickle.dump(umls_dict, file_o)
 	with open(dir_log+'NER_log.txt', 'w') as file_log:
 		file_log.write('Total concepts = '+str(total_count))
 		file_log.write('\nUMLS mapped concepts = '+str(umls_count))
-
-

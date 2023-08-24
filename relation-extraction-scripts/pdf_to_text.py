@@ -65,6 +65,7 @@ def process_PDF_file(file, outputFile):
 	stop_pattern = ["Acknowledgement", "ACKNOWLEDGEMENT", "REFERENCES", "References", "Supplementary Material", "Conflict of Interest statement"]
 	alternate_start_pattern = ["METHODS", "Methods","Subjects and methods","Subjects and Methods", "MATERIALS AND METHODS","Materials and methods", 
 					"METHODS AND MATERIALS","PATIENTS  AND  METHODS", "PARTICIPANTS AND METHODS", "SUBJECTS AND METHODS", "Materials and Methods"]
+	headers_last = ['Result', 'Results', 'RESULTS', 'RESULT', 'Discussion', 'DISCUSSION', 'CONCLUSION', 'Conclusion', 'CONCLUSIONS', 'Conclusions']
 	try:
 		if file.endswith(".txt") and 'processed' not in file:
 			with open(file, 'r') as article_plaintext_file:
@@ -75,18 +76,21 @@ def process_PDF_file(file, outputFile):
 					line_sans_num = re.sub(r'[^A-Za-z ]+', '', line)
 					line_sans_num = line_sans_num.strip()
 					if recording is False:
-						#If the line contains "METHODS" header, start record the text, change the flag to "TRUE"
 						if line_sans_num in start_pattern:
 							print(line)
 							recording = True
-							output_section.append(line.strip())
+							output_section.append('<'+line.strip().upper()+'>')
 					elif recording is True:
-					#If the line contains "RESULTS" header, stop record the text, change the flag to "FALSE"
 						if line_sans_num in stop_pattern:
 							print(line)
 							recording = False
 						else:
-							output_section.append(line.strip())   
+							if line_sans_num in alternate_start_pattern:
+								output_section.append('<METHODS>')
+							elif line_sans_num in start_pattern or line_sans_num in headers_last:
+								output_section.append('<'+line.strip().upper()+'>')
+							else:
+								output_section.append(line.strip())   
 				#Save the text into file
 				outfile = open(outputFile, 'w')
 				for line in output_section:
