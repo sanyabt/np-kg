@@ -1,4 +1,5 @@
-chemical-disease|:;MESH_;|class-class|RO_0002606|http://purl.obolibrary.org/obo/|http://purl.obolibrary.org/obo/|t|1;4|0:./resources/processed_data/MESH_CHEBI_MAP.txt;1:./resources/processed_data/DISEASE_MONDO_MAP.txt|5;!=;''|None
+chemical-disease|:;MESH_;|class-class|RO_0002606|http://purl.obolibrary.org/obo/|http://purl.obolibrary.org/obo/|t|1;4|0:./resources/processed_data/MESH_CHEBI_MAP.txt;1:./resources/processed_data/DISEASE_MONDO_MAP.txt|5;==;therapeutic|None
+chemical-disease|:;MESH_;|class-class|RO_0002610|http://purl.obolibrary.org/obo/|http://purl.obolibrary.org/obo/|t|1;4|0:./resources/processed_data/MESH_CHEBI_MAP.txt;1:./resources/processed_data/DISEASE_MONDO_MAP.txt|5;==;marker/mechanism|None
 chemical-gene|;MESH_;|class-entity|RO_0002434|http://purl.obolibrary.org/obo/|http://www.ncbi.nlm.nih.gov/gene/|t|1;4|0:./resources/processed_data/MESH_CHEBI_MAP.txt|9;affects;not in x|6;==;Homo sapiens::5;.startswith('gene');
 chemical-gobp|:;MESH_;GO_|class-class|RO_0002436|http://purl.obolibrary.org/obo/|http://purl.obolibrary.org/obo/|t|1;5|0:./resources/processed_data/MESH_CHEBI_MAP.txt|8;<=;1.04e-47|3;==;Biological Process
 chemical-gocc|:;MESH_;GO_|class-class|RO_0002436|http://purl.obolibrary.org/obo/|http://purl.obolibrary.org/obo/|t|1;5|0:./resources/processed_data/MESH_CHEBI_MAP.txt|8;<=;1.04e-47|3;==;Cellular Component
@@ -33,5 +34,6 @@ variant-gene|;rs;|entity-entity|RO_0002566|https://www.ncbi.nlm.nih.gov/snp/|htt
 variant-phenotype|:;rs;|entity-class|RO_0003302|https://www.ncbi.nlm.nih.gov/snp/|http://purl.obolibrary.org/obo/|t|9;12|1:./resources/processed_data/PHENOTYPE_HPO_MAP.txt|24;in;["criteria provided, multiple submitters, no conflicts", "reviewed by expert panel", "practice guideline"]::7;==;1|9;!=;-1::16;==;GRCh38::8-9;dedup;desc
 chemical-inhibitor|;;|class-class|RO_0002449|http://purl.obolibrary.org/obo/|http://purl.obolibrary.org/obo/|t|0;1|None|None|None|None
 chemical-molecule|;;|class-class|RO_0002436|http://purl.obolibrary.org/obo/|http://purl.obolibrary.org/obo/|t|0;1|None|None|None|None
-chemical-transporter|;;|class-class|RO_0002020|http://purl.obolibrary.org/obo/|http://purl.obolibrary.org/obo/|t|0;1|None|None|None|None
+transporter-chemical|;;|class-class|RO_0002020|http://purl.obolibrary.org/obo/|http://purl.obolibrary.org/obo/|t|1;0|None|None|None|None
 chemical-substrate|;;|class-class|DIDEO_00000041|http://purl.obolibrary.org/obo/|http://purl.obolibrary.org/obo/|t|0;1|None|None|None|None
+chemical-indication|;;|class-class|RO_0002610|http://purl.obolibrary.org/obo/|http://purl.obolibrary.org/obo/|t|0;1|None|None|None|None

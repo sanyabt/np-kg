@@ -1,0 +1,422 @@
+===================================
+#Tue Aug 22 06:56:44 UTC 2023 
+===================================
+Actual URL: https://storage.googleapis.com/pheknowlator/current_build/data/original_data/
+EDGE: chemical-disease
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = chemical (./resources/processed_data/MESH_CHEBI_MAP.txt) | disease (./resources/processed_data/DISEASE_MONDO_MAP.txt)
+  - FILTERING CRITERIA = None
+  - EVIDENCE CRITERIA = data[5]==therapeutic
+DATA INFO
+  - DOWNLOAD_URL = resources/edge_data/chemical-disease_CTD_chemicals_diseases.tsv
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 701201197
+  - DOWNLOADED_FILE_LOCATION = resources/edge_data/chemical-disease_CTD_chemicals_diseases.tsv
+
+EDGE: chemical-gene
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = chemical (./resources/processed_data/MESH_CHEBI_MAP.txt)
+  - FILTERING CRITERIA = data[6]==Homo sapiens | data[5].startswith('gene')
+  - EVIDENCE CRITERIA = data[9]affectsnot in x
+DATA INFO
+  - DOWNLOAD_URL = resources/edge_data/chemical-gene_CTD_chem_gene_ixns.tsv
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 441097103
+  - DOWNLOADED_FILE_LOCATION = resources/edge_data/chemical-gene_CTD_chem_gene_ixns.tsv
+
+EDGE: chemical-gobp
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = chemical (./resources/processed_data/MESH_CHEBI_MAP.txt)
+  - FILTERING CRITERIA = data[3]==Biological Process
+  - EVIDENCE CRITERIA = data[8]<=1.04e-47
+DATA INFO
+  - DOWNLOAD_URL = resources/edge_data/chemical-gobp_CTD_chem_go_enriched.tsv
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 817733569
+  - DOWNLOADED_FILE_LOCATION = resources/edge_data/chemical-gobp_CTD_chem_go_enriched.tsv
+
+EDGE: chemical-gocc
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = chemical (./resources/processed_data/MESH_CHEBI_MAP.txt)
+  - FILTERING CRITERIA = data[3]==Cellular Component
+  - EVIDENCE CRITERIA = data[8]<=1.04e-47
+DATA INFO
+  - DOWNLOAD_URL = resources/edge_data/chemical-gocc_CTD_chem_go_enriched.tsv
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 817733569
+  - DOWNLOADED_FILE_LOCATION = resources/edge_data/chemical-gocc_CTD_chem_go_enriched.tsv
+
+EDGE: chemical-gomf
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = chemical (./resources/processed_data/MESH_CHEBI_MAP.txt)
+  - FILTERING CRITERIA = data[3]==Molecular Function
+  - EVIDENCE CRITERIA = data[8]<=1.04e-47
+DATA INFO
+  - DOWNLOAD_URL = resources/edge_data/chemical-gomf_CTD_chem_go_enriched.tsv
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 817733569
+  - DOWNLOADED_FILE_LOCATION = resources/edge_data/chemical-gomf_CTD_chem_go_enriched.tsv
+
+EDGE: chemical-pathway
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = None
+  - FILTERING CRITERIA = data[5]==Homo sapiens
+  - EVIDENCE CRITERIA = None
+DATA INFO
+  - DOWNLOAD_URL = resources/edge_data/chemical-pathway_ChEBI2Reactome_All_Levels.txt
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 30485396
+  - DOWNLOADED_FILE_LOCATION = resources/edge_data/chemical-pathway_ChEBI2Reactome_All_Levels.txt
+
+EDGE: chemical-protein
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = chemical (./resources/processed_data/MESH_CHEBI_MAP.txt) | protein (./resources/processed_data/ENTREZ_GENE_PRO_ONTOLOGY_MAP.txt)
+  - FILTERING CRITERIA = data[6]==Homo sapiens | data[5] .startswith('protein') 
+  - EVIDENCE CRITERIA = data[9]affectsnot in x
+DATA INFO
+  - DOWNLOAD_URL = resources/edge_data/chemical-protein_CTD_chem_gene_ixns.tsv
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 441097103
+  - DOWNLOADED_FILE_LOCATION = resources/edge_data/chemical-protein_CTD_chem_gene_ixns.tsv
+
+EDGE: chemical-phenotype
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = chemical (./resources/processed_data/MESH_CHEBI_MAP.txt) | phenotype (./resources/processed_data/PHENOTYPE_HPO_MAP.txt)
+  - FILTERING CRITERIA = None
+  - EVIDENCE CRITERIA = data[5]!=''
+DATA INFO
+  - DOWNLOAD_URL = resources/edge_data/chemical-disease_CTD_chemicals_diseases.tsv
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 701201197
+  - DOWNLOADED_FILE_LOCATION = resources/edge_data/chemical-disease_CTD_chemicals_diseases.tsv
+
+EDGE: disease-phenotype
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = None
+  - FILTERING CRITERIA = None
+  - EVIDENCE CRITERIA = None
+DATA INFO
+  - DOWNLOAD_URL = resources/edge_data/disease-phenotype_phenotype.hpoa
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 27315334
+  - DOWNLOADED_FILE_LOCATION = resources/edge_data/disease-phenotype_phenotype.hpoa
+
+EDGE: gene-disease
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = disease (./resources/processed_data/DISEASE_MONDO_MAP.txt)
+  - FILTERING CRITERIA = None
+  - EVIDENCE CRITERIA = data[10]>=1.0
+DATA INFO
+  - DOWNLOAD_URL = resources/edge_data/gene-disease_curated_gene_disease_associations.tsv
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 11542996
+  - DOWNLOADED_FILE_LOCATION = resources/edge_data/gene-disease_curated_gene_disease_associations.tsv
+
+EDGE: gene-gene
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = gene (./resources/processed_data/ENSEMBL_GENE_ENTREZ_GENE_MAP.txt) | gene (./resources/processed_data/ENSEMBL_GENE_ENTREZ_GENE_MAP.txt)
+  - FILTERING CRITERIA = None
+  - EVIDENCE CRITERIA = None
+DATA INFO
+  - DOWNLOAD_URL = resources/edge_data/gene-gene_COMBINED.DEFAULT_NETWORKS.BP_COMBINING.txt
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 246190113
+  - DOWNLOADED_FILE_LOCATION = resources/edge_data/gene-gene_COMBINED.DEFAULT_NETWORKS.BP_COMBINING.txt
+
+EDGE: gene-pathway
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = None
+  - FILTERING CRITERIA = data[3].startswith('REACT:R-HSA-')
+  - EVIDENCE CRITERIA = None
+DATA INFO
+  - DOWNLOAD_URL = resources/edge_data/gene-pathway_CTD_genes_pathways.tsv
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 8192661
+  - DOWNLOADED_FILE_LOCATION = resources/edge_data/gene-pathway_CTD_genes_pathways.tsv
+
+EDGE: gene-phenotype
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = phenotype (./resources/processed_data/PHENOTYPE_HPO_MAP.txt)
+  - FILTERING CRITERIA = None
+  - EVIDENCE CRITERIA = data[10]>=1.0
+DATA INFO
+  - DOWNLOAD_URL = resources/edge_data/gene-disease_curated_gene_disease_associations.tsv
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 11542996
+  - DOWNLOADED_FILE_LOCATION = resources/edge_data/gene-disease_curated_gene_disease_associations.tsv
+
+EDGE: gene-protein
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = None
+  - FILTERING CRITERIA = None
+  - EVIDENCE CRITERIA = None
+DATA INFO
+  - DOWNLOAD_URL = resources/processed_data/ENTREZ_GENE_PRO_ONTOLOGY_MAP.txt
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 1126605
+  - DOWNLOADED_FILE_LOCATION = resources/processed_data/ENTREZ_GENE_PRO_ONTOLOGY_MAP.txt
+
+EDGE: gene-rna
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = None
+  - FILTERING CRITERIA = None
+  - EVIDENCE CRITERIA = None
+DATA INFO
+  - DOWNLOAD_URL = resources/processed_data/ENTREZ_GENE_ENSEMBL_TRANSCRIPT_MAP.txt
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 16729602
+  - DOWNLOADED_FILE_LOCATION = resources/processed_data/ENTREZ_GENE_ENSEMBL_TRANSCRIPT_MAP.txt
+
+EDGE: gobp-pathway
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = None
+  - FILTERING CRITERIA = data[8]==P | data[12]==taxon:9606 | data[5].startswith('REACTOME')
+  - EVIDENCE CRITERIA = None
+DATA INFO
+  - DOWNLOAD_URL = resources/edge_data/gobp-pathway_gene_association.reactome
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 11955743
+  - DOWNLOADED_FILE_LOCATION = resources/edge_data/gobp-pathway_gene_association.reactome
+
+EDGE: pathway-gocc
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = None
+  - FILTERING CRITERIA = data[8]==C | data[12]==taxon:9606 | data[5].startswith('REACTOME')
+  - EVIDENCE CRITERIA = None
+DATA INFO
+  - DOWNLOAD_URL = resources/edge_data/pathway-gocc_gene_association.reactome
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 11955743
+  - DOWNLOADED_FILE_LOCATION = resources/edge_data/pathway-gocc_gene_association.reactome
+
+EDGE: pathway-gomf
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = None
+  - FILTERING CRITERIA = data[8]==F | data[12]==taxon:9606 | data[5].startswith('REACTOME')
+  - EVIDENCE CRITERIA = None
+DATA INFO
+  - DOWNLOAD_URL = resources/edge_data/pathway-gomf_gene_association.reactome
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 11955743
+  - DOWNLOADED_FILE_LOCATION = resources/edge_data/pathway-gomf_gene_association.reactome
+
+EDGE: protein-anatomy
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = None
+  - FILTERING CRITERIA = None
+  - EVIDENCE CRITERIA = None
+DATA INFO
+  - DOWNLOAD_URL = resources/processed_data/HPA_GTEX_RNA_GENE_PROTEIN_EDGES.txt
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 18388464
+  - DOWNLOADED_FILE_LOCATION = resources/processed_data/HPA_GTEX_RNA_GENE_PROTEIN_EDGES.txt
+
+EDGE: protein-catalyst
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = None
+  - FILTERING CRITERIA = None
+  - EVIDENCE CRITERIA = None
+DATA INFO
+  - DOWNLOAD_URL = resources/processed_data/UNIPROT_PROTEIN_CATALYST.txt
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 1639479
+  - DOWNLOADED_FILE_LOCATION = resources/processed_data/UNIPROT_PROTEIN_CATALYST.txt
+
+EDGE: protein-cofactor
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = None
+  - FILTERING CRITERIA = None
+  - EVIDENCE CRITERIA = None
+DATA INFO
+  - DOWNLOAD_URL = resources/processed_data/UNIPROT_PROTEIN_COFACTOR.txt
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 179314
+  - DOWNLOADED_FILE_LOCATION = resources/processed_data/UNIPROT_PROTEIN_COFACTOR.txt
+
+EDGE: protein-cell
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = None
+  - FILTERING CRITERIA = None
+  - EVIDENCE CRITERIA = None
+DATA INFO
+  - DOWNLOAD_URL = resources/processed_data/HPA_GTEX_RNA_GENE_PROTEIN_EDGES.txt
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 18388464
+  - DOWNLOADED_FILE_LOCATION = resources/processed_data/HPA_GTEX_RNA_GENE_PROTEIN_EDGES.txt
+
+EDGE: protein-gobp
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = protein (./resources/processed_data/UNIPROT_ACCESSION_PRO_ONTOLOGY_MAP.txt)
+  - FILTERING CRITERIA = data[8]==P | data[12]==taxon:9606
+  - EVIDENCE CRITERIA = None
+DATA INFO
+  - DOWNLOAD_URL = resources/edge_data/protein-gobp_goa_human.gaf
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 109325311
+  - DOWNLOADED_FILE_LOCATION = resources/edge_data/protein-gobp_goa_human.gaf
+
+EDGE: protein-gocc
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = protein (./resources/processed_data/UNIPROT_ACCESSION_PRO_ONTOLOGY_MAP.txt)
+  - FILTERING CRITERIA = data[8]==C | data[12]==taxon:9606
+  - EVIDENCE CRITERIA = None
+DATA INFO
+  - DOWNLOAD_URL = resources/edge_data/protein-gocc_goa_human.gaf
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 109325311
+  - DOWNLOADED_FILE_LOCATION = resources/edge_data/protein-gocc_goa_human.gaf
+
+EDGE: protein-gomf
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = protein (./resources/processed_data/UNIPROT_ACCESSION_PRO_ONTOLOGY_MAP.txt)
+  - FILTERING CRITERIA = data[8]==F | data[12]==taxon:9606
+  - EVIDENCE CRITERIA = None
+DATA INFO
+  - DOWNLOAD_URL = resources/edge_data/protein-gomf_goa_human.gaf
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 109325311
+  - DOWNLOADED_FILE_LOCATION = resources/edge_data/protein-gomf_goa_human.gaf
+
+EDGE: protein-pathway
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = protein (./resources/processed_data/UNIPROT_ACCESSION_PRO_ONTOLOGY_MAP.txt)
+  - FILTERING CRITERIA = data[5]==Homo sapiens
+  - EVIDENCE CRITERIA = None
+DATA INFO
+  - DOWNLOAD_URL = resources/edge_data/protein-pathway_UniProt2Reactome_All_Levels.txt
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 102191227
+  - DOWNLOADED_FILE_LOCATION = resources/edge_data/protein-pathway_UniProt2Reactome_All_Levels.txt
+
+EDGE: protein-protein
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = protein (./resources/processed_data/STRING_PRO_ONTOLOGY_MAP.txt) | protein (./resources/processed_data/STRING_PRO_ONTOLOGY_MAP.txt)
+  - FILTERING CRITERIA = None
+  - EVIDENCE CRITERIA = data[2]>=700
+DATA INFO
+  - DOWNLOAD_URL = resources/edge_data/protein-protein_9606.protein.links.v11.0.txt
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 540934917
+  - DOWNLOADED_FILE_LOCATION = resources/edge_data/protein-protein_9606.protein.links.v11.0.txt
+
+EDGE: rna-anatomy
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = None
+  - FILTERING CRITERIA = None
+  - EVIDENCE CRITERIA = None
+DATA INFO
+  - DOWNLOAD_URL = resources/processed_data/HPA_GTEX_RNA_GENE_PROTEIN_EDGES.txt
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 18388464
+  - DOWNLOADED_FILE_LOCATION = resources/processed_data/HPA_GTEX_RNA_GENE_PROTEIN_EDGES.txt
+
+EDGE: rna-cell
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = None
+  - FILTERING CRITERIA = None
+  - EVIDENCE CRITERIA = None
+DATA INFO
+  - DOWNLOAD_URL = resources/processed_data/HPA_GTEX_RNA_GENE_PROTEIN_EDGES.txt
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 18388464
+  - DOWNLOADED_FILE_LOCATION = resources/processed_data/HPA_GTEX_RNA_GENE_PROTEIN_EDGES.txt
+
+EDGE: rna-protein
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = None
+  - FILTERING CRITERIA = None
+  - EVIDENCE CRITERIA = None
+DATA INFO
+  - DOWNLOAD_URL = resources/processed_data/ENSEMBL_TRANSCRIPT_PROTEIN_ONTOLOGY_MAP.txt
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 1867099
+  - DOWNLOADED_FILE_LOCATION = resources/processed_data/ENSEMBL_TRANSCRIPT_PROTEIN_ONTOLOGY_MAP.txt
+
+EDGE: variant-disease
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = None
+  - FILTERING CRITERIA = None
+  - EVIDENCE CRITERIA = None
+DATA INFO
+  - DOWNLOAD_URL = resources/processed_data/CLINVAR_VARIANT_GENE_DISEASE_PHENOTYPE_EDGES.txt
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 6810053481
+  - DOWNLOADED_FILE_LOCATION = resources/processed_data/CLINVAR_VARIANT_GENE_DISEASE_PHENOTYPE_EDGES.txt
+
+EDGE: variant-gene
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = None
+  - FILTERING CRITERIA = None
+  - EVIDENCE CRITERIA = None
+DATA INFO
+  - DOWNLOAD_URL = resources/processed_data/CLINVAR_VARIANT_GENE_DISEASE_PHENOTYPE_EDGES.txt
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 6810053481
+  - DOWNLOADED_FILE_LOCATION = resources/processed_data/CLINVAR_VARIANT_GENE_DISEASE_PHENOTYPE_EDGES.txt
+
+EDGE: variant-phenotype
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = None
+  - FILTERING CRITERIA = None
+  - EVIDENCE CRITERIA = None
+DATA INFO
+  - DOWNLOAD_URL = resources/processed_data/CLINVAR_VARIANT_GENE_DISEASE_PHENOTYPE_EDGES.txt
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 6810053481
+  - DOWNLOADED_FILE_LOCATION = resources/processed_data/CLINVAR_VARIANT_GENE_DISEASE_PHENOTYPE_EDGES.txt
+
+EDGE: transporter-chemical
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = None
+  - FILTERING CRITERIA = None
+  - EVIDENCE CRITERIA = None
+DATA INFO
+  - DOWNLOAD_URL = resources/processed_data/CHEMICAL_TRANSPORTER.tsv
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 1987
+  - DOWNLOADED_FILE_LOCATION = resources/processed_data/CHEMICAL_TRANSPORTER.tsv
+
+EDGE: chemical-molecule
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = None
+  - FILTERING CRITERIA = None
+  - EVIDENCE CRITERIA = None
+DATA INFO
+  - DOWNLOAD_URL = resources/processed_data/CHEMICAL_MOLECULE.tsv
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 8488
+  - DOWNLOADED_FILE_LOCATION = resources/processed_data/CHEMICAL_MOLECULE.tsv
+
+EDGE: chemical-substrate
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = None
+  - FILTERING CRITERIA = None
+  - EVIDENCE CRITERIA = None
+DATA INFO
+  - DOWNLOAD_URL = resources/processed_data/CHEMICAL_SUBSTRATE.tsv
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 11093
+  - DOWNLOADED_FILE_LOCATION = resources/processed_data/CHEMICAL_SUBSTRATE.tsv
+
+EDGE: chemical-inhibitor
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = None
+  - FILTERING CRITERIA = None
+  - EVIDENCE CRITERIA = None
+DATA INFO
+  - DOWNLOAD_URL = resources/processed_data/CHEMICAL_INHIBITOR.tsv
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 5916
+  - DOWNLOADED_FILE_LOCATION = resources/processed_data/CHEMICAL_INHIBITOR.tsv
+
+EDGE: chemical-indication
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = None
+  - FILTERING CRITERIA = None
+  - EVIDENCE CRITERIA = None
+DATA INFO
+  - DOWNLOAD_URL = resources/processed_data/CHEMICAL_INDICATION.tsv
+  - DOWNLOAD_DATE = 08/22/2023
+  - FILE_SIZE_IN_BYTES = 98259
+  - DOWNLOADED_FILE_LOCATION = resources/processed_data/CHEMICAL_INDICATION.tsv
+
