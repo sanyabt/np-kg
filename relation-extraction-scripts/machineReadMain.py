@@ -21,13 +21,9 @@ run_assembly = True
 #start_line = int(sys.argv[1])
 #end_line = int(sys.argv[2])
 
-NP = ['cranberry', 'valerian']
-
-#NP = ['cranberry',  'fenugreek',  'flaxseed', 'ginger', 'ginkgo', 'goldenseal',  'guarana', 'horsechestnut', 
-#'licorice', 'oregano',  'scrubpalmetto',  'valerian']
-
-#NP_new = ['ashwaganda', 'blackpepper', 'blackcohosh', 'cannabis', 'echinacea', 'feverfew', 'garlic', 'grapefruit', 'milkthistle',
-#		'panaxginseng', 'rhodiola', 'rosemary', 'soybean', 'hawthorn']
+NP = ['cranberry',  'fenugreek',  'flaxseed', 'ginger', 'ginkgo', 'goldenseal',  'guarana', 'horsechestnut', 
+'licorice', 'oregano',  'scrubpalmetto',  'valerian', 'ashwaganda', 'blackpepper', 'blackcohosh', 'cannabis', 'echinacea', 'feverfew', 'garlic', 'grapefruit', 'milkthistle',
+'panaxginseng', 'rhodiola', 'rosemary', 'soybean', 'hawthorn']
 
 pmid_list = []
 

@@ -19,12 +19,10 @@ file_umls = workingDir + '/output_files/umls_dict_20230321.pickle'
 save_umls = True
 logging = True
 
-#np=['ashwaganda', 'cranberry','blackcohosh', 'blackpepper', 'echinacea', 'fenugreek', 'feverfew', 
-#'flaxseed', 'garlic', 'ginger', 'ginkgo', 'goldenseal', 'guarana', 'hawthorn', 
-#'horsechestnut', 'licorice', 'milkthistle', 'oregano', 'panaxginseng', 
-#'rhodiola', 'rosemary', 'scrubpalmetto', 'soybean']
-
-np = ['turmeric', 'valerian']
+np=['ashwaganda', 'cranberry','blackcohosh', 'blackpepper', 'echinacea', 'fenugreek', 'feverfew', 
+'flaxseed', 'garlic', 'ginger', 'ginkgo', 'goldenseal', 'guarana', 'hawthorn', 
+'horsechestnut', 'licorice', 'milkthistle', 'oregano', 'panaxginseng', 
+'rhodiola', 'rosemary', 'scrubpalmetto', 'soybean', 'turmeric', 'valerian']
 
 assemble = False
 pub_year_to_pmid_map = {}

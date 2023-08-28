@@ -16,7 +16,7 @@ ToDO:
 
 workingDir = os.getcwd()
 log_dir = workingDir + '/logs/'
-np = ['ashwaganda']
+np = ['list of NPs']
 
 extraction = True
 

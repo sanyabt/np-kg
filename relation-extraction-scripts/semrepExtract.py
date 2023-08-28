@@ -14,7 +14,7 @@ import logging
 workingDir = os.getcwd()
 log_dir = workingDir + '/logs/'
 
-np = ['greentea', 'cinnamon']
+np = []
 
 extraction = True
 

@@ -16,7 +16,7 @@ workingDir = os.getcwd()
 log_dir = workingDir + '/logs/'
 utf_path = 'replace_utf8.jar'
 
-np = ['kratom']
+np = ['list of NPs']
 
 extraction = True
 

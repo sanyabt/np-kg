@@ -1,6 +1,5 @@
 '''
 Script to run NER on texts with MetaMap (installed locally)
---last run for all NPs (N=28)
 '''
 from pymetamap import MetaMap
 import pickle
@@ -14,7 +13,7 @@ workingDir = os.getcwd()
 dir_out = workingDir + '/output_files/'
 reachDir = dir_out + 'reach_mapping_files_NER/'
 dir_log = workingDir + '/logs/'
-mm = MetaMap.get_instance('/media/extension-1/UMLS/MetaMap/public_mm/bin/metamap')
+mm = MetaMap.get_instance('<path of metamap>')
 
 with open(dir_out+'umls_dict_20221128.pickle', 'rb') as file_i:
 		umls_dict = pickle.load(file_i)
