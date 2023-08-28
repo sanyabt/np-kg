@@ -1,38 +1,41 @@
 Edge Type	Relation	Example Edge	Unique Edges
-variant-disease	causes or contributes to condition	rs146691368, MONDO_0018477	69965
-protein-protein	molecularly interacts with	PR_P84085, PR_O15020	617499
-chemical-gocc	molecularly interacts with	CHEBI_34568, GO_0005623	47920
-disease-phenotype	has phenotype	MONDO_0010761, HP_0000510	444807
-variant-phenotype	causes or contributes to condition	rs527236137, HP_0000556	4855
-gene-disease	causes or contributes to condition	2, MONDO_0010200	13344
-protein-pathway	participates in	PR_A0A075B6P5, R-HSA-109582	117707
-protein-gocc	located in	PR_A0A024RBG1, GO_0005829	82524
-rna-protein	ribosomally translates to	ENST00000499023, PR_O43660	28220
-chemical-phenotype	is substance that treats	CHEBI_701, HP_0001250	111790
-rna-cell	located in	ENST00000488147, CL_0000057	33152
-chemical-inhibitor	directly negatively regulates activity of	CHEBI_28901, PR_P11509	273
-protein-cofactor	molecularly interacts with	PR_Q00266, CHEBI_18420	1998
 chemical-molecule	molecularly interacts with	CHEBI_35553, PR_P10635	393
-protein-gobp	participates in	PR_A0A075B6H7, GO_0002250	129426
-gene-protein	has gene product	4836, PR_P30419	19527
-chemical-disease	correlated with	CHEBI_71223, MONDO_0018229	112863
-protein-anatomy	located in	PR_P04217, UBERON_0001114	26815
-transporter-chemical	transports	PR_Q9NPD5, CHEBI_38545	91
-gobp-pathway	realized in response to	GO_0016567, R-HSA-8866654	672
-gene-pathway	participates in	1, R-HSA-109582	107009
-protein-catalyst	molecularly interacts with	PR_Q00266, CHEBI_15377	25136
+chemical-gocc	molecularly interacts with	CHEBI_34568, GO_0005623	47920
+protein-gocc	located in	PR_A0A024RBG1, GO_0005829	82524
+chemical-diseasetherapeutic	is substance that treats	CHEBI_701, MONDO_0005027	72463
+gene-rna	transcribed to	81623, ENST00000382398	197370
+variant-disease	causes or contributes to condition	rs146691368, MONDO_0018477	69965
+chemical-phenotype	correlated with	CHEBI_34026, HP_0000137	81939
 protein-gomf	has function	PR_A0A024RBG1, GO_0003723	69816
+protein-pathway	participates in	PR_A0A075B6P5, R-HSA-109582	117707
+rna-protein	ribosomally translates to	ENST00000499023, PR_O43660	28220
 variant-gene	causally influences	rs367697256, 7476	236121
-chemical-substrate	is substrate of	CHEBI_135737, PR_P33261	514
-gene-phenotype	causes or contributes to condition	1, HP_0002240	24695
-rna-anatomy	located in	ENST00000359318, UBERON_0001987	474073
-gene-gene	genetically interacts with	84220, 729540	1715
-pathway-gomf	has function	R-HSA-8876283, GO_0015370	2426
 chemical-protein	interacts with	CHEBI_4592, PR_P07099	72564
-chemical-gene	interacts with	CHEBI_28667, 348	16718
+pathway-gomf	has function	R-HSA-8876283, GO_0015370	2426
+protein-gobp	participates in	PR_A0A075B6H7, GO_0002250	129426
+protein-protein	molecularly interacts with	PR_P84085, PR_O15020	617499
+chemical-gobp	molecularly interacts with	CHEBI_35299, GO_0048856	290258
+transporter-chemical	transports	PR_Q9NPD5, CHEBI_38545	91
+chemical-phenotypetherapeutic	is substance that treats	CHEBI_701, HP_0001250	37369
 chemical-indication	correlated with	CHEBI_4875, MONDO_0008383	3996
+rna-anatomy	located in	ENST00000359318, UBERON_0001987	474073
+gene-protein	has gene product	4836, PR_P30419	19527
+protein-anatomy	located in	PR_P04217, UBERON_0001114	26815
+chemical-gene	interacts with	CHEBI_28667, 348	16718
+chemical-inhibitor	directly negatively regulates activity of	CHEBI_28901, PR_P11509	273
+disease-phenotype	has phenotype	MONDO_0010761, HP_0000510	444807
+gene-gene	genetically interacts with	84220, 729540	1715
+gene-disease	causes or contributes to condition	2, MONDO_0010200	13344
+chemical-substrate	is substrate of	CHEBI_135737, PR_P33261	514
+rna-cell	located in	ENST00000488147, CL_0000057	33152
 chemical-gomf	molecularly interacts with	CHEBI_34568, GO_0005488	28181
 pathway-gocc	has component	R-HSA-166753, GO_0005576	16014
-gene-rna	transcribed to	81623, ENST00000382398	197370
+chemical-disease	correlated with	CHEBI_71223, MONDO_0018229	112863
+gobp-pathway	realized in response to	GO_0016567, R-HSA-8866654	672
 chemical-pathway	participates in	CHEBI_10033, R-HSA-1430728	29988
-chemical-gobp	molecularly interacts with	CHEBI_35299, GO_0048856	290258
+protein-cell	located in	PR_P04217, UBERON_0002113	75311
+gene-phenotype	causes or contributes to condition	1, HP_0002240	24695
+gene-pathway	participates in	1, R-HSA-109582	107009
+protein-cofactor	molecularly interacts with	PR_Q00266, CHEBI_18420	1998
+protein-catalyst	molecularly interacts with	PR_Q00266, CHEBI_15377	25136
+variant-phenotype	causes or contributes to condition	rs527236137, HP_0000556	4855

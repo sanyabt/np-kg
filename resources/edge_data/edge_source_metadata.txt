@@ -1,15 +1,26 @@
 ===================================
-#Tue Aug 22 06:56:44 UTC 2023 
+#Thu Aug 24 10:04:12 UTC 2023 
 ===================================
-Actual URL: https://storage.googleapis.com/pheknowlator/current_build/data/original_data/
-EDGE: chemical-disease
+
+EDGE: chemical-diseasetherapeutic
 DATA PROCESSING INFO
-  - IDENTIFIER MAPPING = chemical (./resources/processed_data/MESH_CHEBI_MAP.txt) | disease (./resources/processed_data/DISEASE_MONDO_MAP.txt)
+  - IDENTIFIER MAPPING = chemical (./resources/processed_data/MESH_CHEBI_MAP.txt) | diseasetherapeutic (./resources/processed_data/DISEASE_MONDO_MAP.txt)
   - FILTERING CRITERIA = None
   - EVIDENCE CRITERIA = data[5]==therapeutic
 DATA INFO
   - DOWNLOAD_URL = resources/edge_data/chemical-disease_CTD_chemicals_diseases.tsv
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
+  - FILE_SIZE_IN_BYTES = 701201197
+  - DOWNLOADED_FILE_LOCATION = resources/edge_data/chemical-disease_CTD_chemicals_diseases.tsv
+
+EDGE: chemical-disease
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = chemical (./resources/processed_data/MESH_CHEBI_MAP.txt) | diseasetherapeutic (./resources/processed_data/DISEASE_MONDO_MAP.txt)
+  - FILTERING CRITERIA = None
+  - EVIDENCE CRITERIA = data[5]==therapeutic
+DATA INFO
+  - DOWNLOAD_URL = resources/edge_data/chemical-disease_CTD_chemicals_diseases.tsv
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 701201197
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/chemical-disease_CTD_chemicals_diseases.tsv
 
@@ -20,7 +31,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = data[9]affectsnot in x
 DATA INFO
   - DOWNLOAD_URL = resources/edge_data/chemical-gene_CTD_chem_gene_ixns.tsv
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 441097103
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/chemical-gene_CTD_chem_gene_ixns.tsv
 
@@ -31,7 +42,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = data[8]<=1.04e-47
 DATA INFO
   - DOWNLOAD_URL = resources/edge_data/chemical-gobp_CTD_chem_go_enriched.tsv
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 817733569
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/chemical-gobp_CTD_chem_go_enriched.tsv
 
@@ -42,7 +53,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = data[8]<=1.04e-47
 DATA INFO
   - DOWNLOAD_URL = resources/edge_data/chemical-gocc_CTD_chem_go_enriched.tsv
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 817733569
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/chemical-gocc_CTD_chem_go_enriched.tsv
 
@@ -53,7 +64,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = data[8]<=1.04e-47
 DATA INFO
   - DOWNLOAD_URL = resources/edge_data/chemical-gomf_CTD_chem_go_enriched.tsv
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 817733569
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/chemical-gomf_CTD_chem_go_enriched.tsv
 
@@ -64,7 +75,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = resources/edge_data/chemical-pathway_ChEBI2Reactome_All_Levels.txt
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 30485396
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/chemical-pathway_ChEBI2Reactome_All_Levels.txt
 
@@ -75,18 +86,29 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = data[9]affectsnot in x
 DATA INFO
   - DOWNLOAD_URL = resources/edge_data/chemical-protein_CTD_chem_gene_ixns.tsv
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 441097103
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/chemical-protein_CTD_chem_gene_ixns.tsv
 
-EDGE: chemical-phenotype
+EDGE: chemical-phenotypetherapeutic
 DATA PROCESSING INFO
-  - IDENTIFIER MAPPING = chemical (./resources/processed_data/MESH_CHEBI_MAP.txt) | phenotype (./resources/processed_data/PHENOTYPE_HPO_MAP.txt)
+  - IDENTIFIER MAPPING = chemical (./resources/processed_data/MESH_CHEBI_MAP.txt) | phenotypetherapeutic (./resources/processed_data/PHENOTYPE_HPO_MAP.txt)
   - FILTERING CRITERIA = None
-  - EVIDENCE CRITERIA = data[5]!=''
+  - EVIDENCE CRITERIA = data[5]==therapeutic
 DATA INFO
   - DOWNLOAD_URL = resources/edge_data/chemical-disease_CTD_chemicals_diseases.tsv
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
+  - FILE_SIZE_IN_BYTES = 701201197
+  - DOWNLOADED_FILE_LOCATION = resources/edge_data/chemical-disease_CTD_chemicals_diseases.tsv
+
+EDGE: chemical-phenotype
+DATA PROCESSING INFO
+  - IDENTIFIER MAPPING = chemical (./resources/processed_data/MESH_CHEBI_MAP.txt) | phenotypetherapeutic (./resources/processed_data/PHENOTYPE_HPO_MAP.txt)
+  - FILTERING CRITERIA = None
+  - EVIDENCE CRITERIA = data[5]==therapeutic
+DATA INFO
+  - DOWNLOAD_URL = resources/edge_data/chemical-disease_CTD_chemicals_diseases.tsv
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 701201197
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/chemical-disease_CTD_chemicals_diseases.tsv
 
@@ -97,7 +119,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = resources/edge_data/disease-phenotype_phenotype.hpoa
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 27315334
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/disease-phenotype_phenotype.hpoa
 
@@ -108,7 +130,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = data[10]>=1.0
 DATA INFO
   - DOWNLOAD_URL = resources/edge_data/gene-disease_curated_gene_disease_associations.tsv
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 11542996
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/gene-disease_curated_gene_disease_associations.tsv
 
@@ -119,7 +141,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = resources/edge_data/gene-gene_COMBINED.DEFAULT_NETWORKS.BP_COMBINING.txt
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 246190113
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/gene-gene_COMBINED.DEFAULT_NETWORKS.BP_COMBINING.txt
 
@@ -130,7 +152,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = resources/edge_data/gene-pathway_CTD_genes_pathways.tsv
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 8192661
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/gene-pathway_CTD_genes_pathways.tsv
 
@@ -141,7 +163,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = data[10]>=1.0
 DATA INFO
   - DOWNLOAD_URL = resources/edge_data/gene-disease_curated_gene_disease_associations.tsv
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 11542996
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/gene-disease_curated_gene_disease_associations.tsv
 
@@ -152,7 +174,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = resources/processed_data/ENTREZ_GENE_PRO_ONTOLOGY_MAP.txt
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 1126605
   - DOWNLOADED_FILE_LOCATION = resources/processed_data/ENTREZ_GENE_PRO_ONTOLOGY_MAP.txt
 
@@ -163,7 +185,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = resources/processed_data/ENTREZ_GENE_ENSEMBL_TRANSCRIPT_MAP.txt
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 16729602
   - DOWNLOADED_FILE_LOCATION = resources/processed_data/ENTREZ_GENE_ENSEMBL_TRANSCRIPT_MAP.txt
 
@@ -174,7 +196,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = resources/edge_data/gobp-pathway_gene_association.reactome
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 11955743
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/gobp-pathway_gene_association.reactome
 
@@ -185,7 +207,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = resources/edge_data/pathway-gocc_gene_association.reactome
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 11955743
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/pathway-gocc_gene_association.reactome
 
@@ -196,7 +218,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = resources/edge_data/pathway-gomf_gene_association.reactome
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 11955743
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/pathway-gomf_gene_association.reactome
 
@@ -207,7 +229,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = resources/processed_data/HPA_GTEX_RNA_GENE_PROTEIN_EDGES.txt
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 18388464
   - DOWNLOADED_FILE_LOCATION = resources/processed_data/HPA_GTEX_RNA_GENE_PROTEIN_EDGES.txt
 
@@ -218,7 +240,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = resources/processed_data/UNIPROT_PROTEIN_CATALYST.txt
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 1639479
   - DOWNLOADED_FILE_LOCATION = resources/processed_data/UNIPROT_PROTEIN_CATALYST.txt
 
@@ -229,20 +251,20 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = resources/processed_data/UNIPROT_PROTEIN_COFACTOR.txt
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 179314
   - DOWNLOADED_FILE_LOCATION = resources/processed_data/UNIPROT_PROTEIN_COFACTOR.txt
 
 EDGE: protein-cell
 DATA PROCESSING INFO
-  - IDENTIFIER MAPPING = None
-  - FILTERING CRITERIA = None
+  - IDENTIFIER MAPPING = protein (./resources/processed_data/UNIPROT_ACCESSION_PRO_ONTOLOGY_MAP.txt) | cell (./resources/processed_data/HPA_GTEx_TISSUE_CELL_MAP.txt)
+  - FILTERING CRITERIA = data[3]==Evidence at protein level | data[4]==cell line
   - EVIDENCE CRITERIA = None
 DATA INFO
-  - DOWNLOAD_URL = resources/processed_data/HPA_GTEX_RNA_GENE_PROTEIN_EDGES.txt
-  - DOWNLOAD_DATE = 08/22/2023
-  - FILE_SIZE_IN_BYTES = 18388464
-  - DOWNLOADED_FILE_LOCATION = resources/processed_data/HPA_GTEX_RNA_GENE_PROTEIN_EDGES.txt
+  - DOWNLOAD_URL = resources/edge_data/protein-cell_HPA_GTEX_RNA_GENE_PROTEIN_EDGES.txt
+  - DOWNLOAD_DATE = 08/24/2023
+  - FILE_SIZE_IN_BYTES = 20611429
+  - DOWNLOADED_FILE_LOCATION = resources/edge_data/protein-cell_HPA_GTEX_RNA_GENE_PROTEIN_EDGES.txt
 
 EDGE: protein-gobp
 DATA PROCESSING INFO
@@ -251,7 +273,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = resources/edge_data/protein-gobp_goa_human.gaf
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 109325311
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/protein-gobp_goa_human.gaf
 
@@ -262,7 +284,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = resources/edge_data/protein-gocc_goa_human.gaf
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 109325311
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/protein-gocc_goa_human.gaf
 
@@ -273,7 +295,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = resources/edge_data/protein-gomf_goa_human.gaf
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 109325311
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/protein-gomf_goa_human.gaf
 
@@ -284,7 +306,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = resources/edge_data/protein-pathway_UniProt2Reactome_All_Levels.txt
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 102191227
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/protein-pathway_UniProt2Reactome_All_Levels.txt
 
@@ -295,7 +317,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = data[2]>=700
 DATA INFO
   - DOWNLOAD_URL = resources/edge_data/protein-protein_9606.protein.links.v11.0.txt
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 540934917
   - DOWNLOADED_FILE_LOCATION = resources/edge_data/protein-protein_9606.protein.links.v11.0.txt
 
@@ -306,7 +328,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = resources/processed_data/HPA_GTEX_RNA_GENE_PROTEIN_EDGES.txt
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 18388464
   - DOWNLOADED_FILE_LOCATION = resources/processed_data/HPA_GTEX_RNA_GENE_PROTEIN_EDGES.txt
 
@@ -317,7 +339,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = resources/processed_data/HPA_GTEX_RNA_GENE_PROTEIN_EDGES.txt
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 18388464
   - DOWNLOADED_FILE_LOCATION = resources/processed_data/HPA_GTEX_RNA_GENE_PROTEIN_EDGES.txt
 
@@ -328,7 +350,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = resources/processed_data/ENSEMBL_TRANSCRIPT_PROTEIN_ONTOLOGY_MAP.txt
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 1867099
   - DOWNLOADED_FILE_LOCATION = resources/processed_data/ENSEMBL_TRANSCRIPT_PROTEIN_ONTOLOGY_MAP.txt
 
@@ -339,7 +361,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = resources/processed_data/CLINVAR_VARIANT_GENE_DISEASE_PHENOTYPE_EDGES.txt
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 6810053481
   - DOWNLOADED_FILE_LOCATION = resources/processed_data/CLINVAR_VARIANT_GENE_DISEASE_PHENOTYPE_EDGES.txt
 
@@ -350,7 +372,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = resources/processed_data/CLINVAR_VARIANT_GENE_DISEASE_PHENOTYPE_EDGES.txt
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 6810053481
   - DOWNLOADED_FILE_LOCATION = resources/processed_data/CLINVAR_VARIANT_GENE_DISEASE_PHENOTYPE_EDGES.txt
 
@@ -361,7 +383,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = resources/processed_data/CLINVAR_VARIANT_GENE_DISEASE_PHENOTYPE_EDGES.txt
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 6810053481
   - DOWNLOADED_FILE_LOCATION = resources/processed_data/CLINVAR_VARIANT_GENE_DISEASE_PHENOTYPE_EDGES.txt
 
@@ -372,7 +394,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = resources/processed_data/CHEMICAL_TRANSPORTER.tsv
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 1987
   - DOWNLOADED_FILE_LOCATION = resources/processed_data/CHEMICAL_TRANSPORTER.tsv
 
@@ -383,7 +405,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = resources/processed_data/CHEMICAL_MOLECULE.tsv
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 8488
   - DOWNLOADED_FILE_LOCATION = resources/processed_data/CHEMICAL_MOLECULE.tsv
 
@@ -394,7 +416,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = resources/processed_data/CHEMICAL_SUBSTRATE.tsv
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 11093
   - DOWNLOADED_FILE_LOCATION = resources/processed_data/CHEMICAL_SUBSTRATE.tsv
 
@@ -405,7 +427,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = resources/processed_data/CHEMICAL_INHIBITOR.tsv
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 5916
   - DOWNLOADED_FILE_LOCATION = resources/processed_data/CHEMICAL_INHIBITOR.tsv
 
@@ -416,7 +438,7 @@ DATA PROCESSING INFO
   - EVIDENCE CRITERIA = None
 DATA INFO
   - DOWNLOAD_URL = resources/processed_data/CHEMICAL_INDICATION.tsv
-  - DOWNLOAD_DATE = 08/22/2023
+  - DOWNLOAD_DATE = 08/24/2023
   - FILE_SIZE_IN_BYTES = 98259
   - DOWNLOADED_FILE_LOCATION = resources/processed_data/CHEMICAL_INDICATION.tsv
 

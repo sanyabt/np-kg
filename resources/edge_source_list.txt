@@ -1,3 +1,4 @@
+chemical-diseasetherapeutic, resources/edge_data/chemical-disease_CTD_chemicals_diseases.tsv
 chemical-disease, resources/edge_data/chemical-disease_CTD_chemicals_diseases.tsv
 chemical-gene, resources/edge_data/chemical-gene_CTD_chem_gene_ixns.tsv
 chemical-gobp, resources/edge_data/chemical-gobp_CTD_chem_go_enriched.tsv
@@ -5,6 +6,7 @@ chemical-gocc, resources/edge_data/chemical-gocc_CTD_chem_go_enriched.tsv
 chemical-gomf, resources/edge_data/chemical-gomf_CTD_chem_go_enriched.tsv
 chemical-pathway, resources/edge_data/chemical-pathway_ChEBI2Reactome_All_Levels.txt
 chemical-protein, resources/edge_data/chemical-protein_CTD_chem_gene_ixns.tsv
+chemical-phenotypetherapeutic, resources/edge_data/chemical-disease_CTD_chemicals_diseases.tsv
 chemical-phenotype, resources/edge_data/chemical-disease_CTD_chemicals_diseases.tsv
 disease-phenotype, resources/edge_data/disease-phenotype_phenotype.hpoa
 gene-disease, resources/edge_data/gene-disease_curated_gene_disease_associations.tsv
@@ -19,7 +21,7 @@ pathway-gomf, resources/edge_data/pathway-gomf_gene_association.reactome
 protein-anatomy, resources/processed_data/HPA_GTEX_RNA_GENE_PROTEIN_EDGES.txt
 protein-catalyst, resources/processed_data/UNIPROT_PROTEIN_CATALYST.txt
 protein-cofactor, resources/processed_data/UNIPROT_PROTEIN_COFACTOR.txt
-protein-cell, resources/processed_data/HPA_GTEX_RNA_GENE_PROTEIN_EDGES.txt
+protein-cell, resources/edge_data/protein-cell_HPA_GTEX_RNA_GENE_PROTEIN_EDGES.txt
 protein-gobp, resources/edge_data/protein-gobp_goa_human.gaf
 protein-gocc, resources/edge_data/protein-gocc_goa_human.gaf
 protein-gomf, resources/edge_data/protein-gomf_goa_human.gaf
