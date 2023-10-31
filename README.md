@@ -32,15 +32,15 @@ python -m pip install -r requirements.txt
 1. [Download the knowledge graph and node labels files from Zenodo](https://doi.org/10.5281/zenodo.6814507) and add to local folder - resources/knowledge_graphs. NP-KG is available as TSV file with triples and NetworkX multidigraph (gpickle files).
 
 * **Merged KG:** includes merged PheKnowLator KG and literature-based graph. Download this file if you do not know which KG to use.
-	* Filename: _PheKnowLator_machine_read_merged_instance_based_OWLNETS_v1.0.1.tsv_
-	* Filename: _PheKnowLator_machine_read_merged_instance_based_OWLNETS_v1.0.1.gpickle_
+	* Filename: _NP-KG_v2.0.0.tsv_
+	* Filename: _NP-KG_v2.0.0.gpickle_
 * **PheKnowLator KG:** includes full instance-based build of the PheKnowLator KG. See [PheKnowLator](https://github.com/callahantiff/PheKnowLator) for more details.
-	* Filename: _PheKnowLator_v3.0.0_full_instance_inverseRelations_OWLNETS_NetworkxMultiDiGraph.gpickle_
+	* Filename: _PheKnowLator_v3.1.1_full_instance_inverseRelations_OWLNETS_NetworkxMultiDiGraph.gpickle_
 * **Literature-based graph:** includes all nodes and edges extracted from full texts of green tea and kratom literature and inferred edges.
-	* Filename: _machine_read_merged_with_closure_v1.0.pickle_
+	* Filename: _machine_read_merged_v2.0.0.gpickle_
 
 ### Node Labels
-* Download _nodeLabels_v1.0.1.tsv_ file with all node labels for the merged KG.
+* Download _nodeLabels_v2.0.0.tsv_ file with all node labels for the merged KG.
 
 2. See [evaluation-scripts](https://github.com/sanyabt/np-kg/tree/main/evaluation-scripts) for examples of queries and path searches.
 
@@ -48,7 +48,7 @@ Note: The download link also contains the KGs as gpickle and ntriples files with
 
 ### Loading NP-KG with GRAPE
 
-NP-KG can also be loaded with the Graph Representation Learning library [GRAPE](https://github.com/AnacletoLAB/grape) as below. See [NP-KG Grape Animation tutorial](https://github.com/sanyabt/np-kg/blob/main/resources/NPKG-Grape-Animation.ipynb) for details.
+NP-KG (v1.0.1) can also be loaded with the Graph Representation Learning library [GRAPE](https://github.com/AnacletoLAB/grape) as below. See [NP-KG Grape Animation tutorial](https://github.com/sanyabt/np-kg/blob/main/resources/NPKG-Grape-Animation.ipynb) for details.
 
 ```python
 pip install grape -U
@@ -69,9 +69,9 @@ Get in touch through GitHub issues, discussion, or [email](mailto:sbt12@pitt.edu
 
 Related Work
 ------------------------------------------------
-**NP-KG Preprint**
+**NP-KG Publication**
 
-Taneja SB, Callahan TJ, Paine MF, Kane-Gill SL, Kilicoglu H, Joachimiak MP, Boyce RD. Developing a Knowledge Graph Framework for Pharmacokinetic Natural Product-Drug Interactions. arXiv. 2022. [10.48550/arXiv.2209.11950](https://doi.org/10.48550/arXiv.2209.11950).
+Taneja SB, Callahan TJ, Paine MF, Kane-Gill SL, Kilicoglu H, Joachimiak MP, Boyce RD. Developing a Knowledge Graph Framework for Pharmacokinetic Natural Product-Drug Interactions. Journal of Biomedical Informatics. 2023. [DOI: doi.org/10.1016/j.jbi.2023.104341](https://doi.org/10.1016/j.jbi.2023.104341).
 
 **AMIA Informatics Summit poster**
 
@@ -84,17 +84,20 @@ Taneja SB, Callahan TJ, Brochhausen M, Paine MF, Kane-Gill SL, Boyce RD. Designi
 
 Cite this Work
 ------------------------------------------------
-**Preprint**
+**Publication**
+
 ```
-@misc{https://doi.org/10.48550/arxiv.2209.11950,
-  doi		= {10.48550/ARXIV.2209.11950},
-  url		= {https://arxiv.org/abs/2209.11950},
-  author	= {Taneja, Sanya B. and Callahan, Tiffany J. and Paine, Mary F. and Kane-Gill, Sandra L. and Kilicoglu, Halil and Joachimiak, Marcin P. and Boyce, Richard D.},
-  keywords	= {Artificial Intelligence (cs.AI), Quantitative Methods (q-bio.QM), FOS: Computer and information sciences, FOS: Computer and information sciences, FOS: Biological sciences, FOS: Biological sciences},
-  title		= {Developing a Knowledge Graph Framework for Pharmacokinetic Natural Product-Drug Interactions},
-  publisher	= {arXiv},
-  year		= {2022},
-  copyright	= {Creative Commons Attribution 4.0 International}
+@article{taneja_developing_2023,
+	title = {Developing a {Knowledge} {Graph} for {Pharmacokinetic} {Natural} {Product}-{Drug} {Interactions}},
+	volume = {140},
+	issn = {1532-0464},
+	url = {https://www.sciencedirect.com/science/article/pii/S153204642300062X},
+	doi = {10.1016/j.jbi.2023.104341},
+	language = {en},
+	urldate = {2023-03-23},
+	journal = {Journal of Biomedical Informatics},
+	author = {Taneja, Sanya B. and Callahan, Tiffany J. and Paine, Mary F. and Kane-Gill, Sandra L. and Kilicoglu, Halil and Joachimiak, Marcin P. and Boyce, Richard D.},
+	year = {2023},
 }
 ```
 
