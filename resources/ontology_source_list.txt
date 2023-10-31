@@ -2,11 +2,13 @@ disease, resources/ontologies/mondo_with_imports.owl
 napdichem, resources/ontologies/chebi_lite_merged_with_imports.owl
 protein, resources/ontologies/pr_with_imports.owl
 pathway, resources/ontologies/pw_with_imports.owl
-relation, resources/ontologies/ro_with_imports_AD_mods.owl
+relation, resources/ontologies/ro_with_imports.owl
 go, resources/ontologies/go_with_imports.owl
-chemical, resources/ontologies/chebi_lite_with_imports.owl
+chemical, resources/ontologies/chebi_with_imports.owl
 phenotype, resources/ontologies/hp_with_imports.owl
-anatomy, resources/ontologies/ext_with_imports.owl
+anatomy, resources/ontologies/uberon_with_imports.owl
 cell, resources/ontologies/clo_with_imports.owl
 genomic, resources/ontologies/so_with_imports.owl
 oae, resources/ontologies/oae_merged_with_imports.owl
+plant, resources/ontologies/po_with_imports.owl
+dideo, resources/ontologies/dideo_with_imports.owl

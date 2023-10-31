@@ -1,3 +1,4 @@
+chemical-diseasetherapeutic, resources/edge_data/chemical-disease_CTD_chemicals_diseases.tsv
 chemical-disease, resources/edge_data/chemical-disease_CTD_chemicals_diseases.tsv
 chemical-gene, resources/edge_data/chemical-gene_CTD_chem_gene_ixns.tsv
 chemical-gobp, resources/edge_data/chemical-gobp_CTD_chem_go_enriched.tsv
@@ -5,12 +6,13 @@ chemical-gocc, resources/edge_data/chemical-gocc_CTD_chem_go_enriched.tsv
 chemical-gomf, resources/edge_data/chemical-gomf_CTD_chem_go_enriched.tsv
 chemical-pathway, resources/edge_data/chemical-pathway_ChEBI2Reactome_All_Levels.txt
 chemical-protein, resources/edge_data/chemical-protein_CTD_chem_gene_ixns.tsv
-chemical-phenotype, resources/edge_data/CTD_chemicals_diseases.tsv
-disease-phenotype, resources/edge_data/phenotype.hpoa
+chemical-phenotypetherapeutic, resources/edge_data/chemical-disease_CTD_chemicals_diseases.tsv
+chemical-phenotype, resources/edge_data/chemical-disease_CTD_chemicals_diseases.tsv
+disease-phenotype, resources/edge_data/disease-phenotype_phenotype.hpoa
 gene-disease, resources/edge_data/gene-disease_curated_gene_disease_associations.tsv
 gene-gene, resources/edge_data/gene-gene_COMBINED.DEFAULT_NETWORKS.BP_COMBINING.txt
 gene-pathway, resources/edge_data/gene-pathway_CTD_genes_pathways.tsv
-gene-phenotype, resources/edge_data/curated_gene_disease_associations.tsv
+gene-phenotype, resources/edge_data/gene-disease_curated_gene_disease_associations.tsv
 gene-protein, resources/processed_data/ENTREZ_GENE_PRO_ONTOLOGY_MAP.txt
 gene-rna, resources/processed_data/ENTREZ_GENE_ENSEMBL_TRANSCRIPT_MAP.txt
 gobp-pathway, resources/edge_data/gobp-pathway_gene_association.reactome
@@ -19,7 +21,7 @@ pathway-gomf, resources/edge_data/pathway-gomf_gene_association.reactome
 protein-anatomy, resources/processed_data/HPA_GTEX_RNA_GENE_PROTEIN_EDGES.txt
 protein-catalyst, resources/processed_data/UNIPROT_PROTEIN_CATALYST.txt
 protein-cofactor, resources/processed_data/UNIPROT_PROTEIN_COFACTOR.txt
-protein-cell, resources/processed_data/HPA_GTEX_RNA_GENE_PROTEIN_EDGES.txt
+protein-cell, resources/edge_data/protein-cell_HPA_GTEX_RNA_GENE_PROTEIN_EDGES.txt
 protein-gobp, resources/edge_data/protein-gobp_goa_human.gaf
 protein-gocc, resources/edge_data/protein-gocc_goa_human.gaf
 protein-gomf, resources/edge_data/protein-gomf_goa_human.gaf
@@ -31,7 +33,8 @@ rna-protein, resources/processed_data/ENSEMBL_TRANSCRIPT_PROTEIN_ONTOLOGY_MAP.tx
 variant-disease, resources/processed_data/CLINVAR_VARIANT_GENE_DISEASE_PHENOTYPE_EDGES.txt
 variant-gene, resources/processed_data/CLINVAR_VARIANT_GENE_DISEASE_PHENOTYPE_EDGES.txt
 variant-phenotype, resources/processed_data/CLINVAR_VARIANT_GENE_DISEASE_PHENOTYPE_EDGES.txt
-chemical-transporter, resources/processed_data/CHEMICAL_TRANSPORTER.tsv
+transporter-chemical, resources/processed_data/CHEMICAL_TRANSPORTER.tsv
 chemical-molecule, resources/processed_data/CHEMICAL_MOLECULE.tsv
 chemical-substrate, resources/processed_data/CHEMICAL_SUBSTRATE.tsv
 chemical-inhibitor, resources/processed_data/CHEMICAL_INHIBITOR.tsv
+chemical-indication, resources/processed_data/CHEMICAL_INDICATION.tsv
