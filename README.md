@@ -4,17 +4,15 @@
 
 **Knowledge Graph Framework to Generate Hypotheses for Natural Product-Drug Interactions**
 
-![KG-Framework](images/methods-overview.png)
-
-NP-KG is a graph framework that creates a biomedical knowledge graph (KG) to identify and generate mechanistic hypotheses for pharmacokinetic natural product-drug interactions (NPDIs). NP-KG uses the [PheKnowLator ecosystem](https://github.com/callahantiff/PheKnowLator) to create an ontology-grounded KG. It then uses two relation extraction systems to extract triples from natural product-related biomedical literature to create a literature-based graph, and integrates the nodes and edges in the ontology-grounded KG. 
+NP-KG is a graph framework that creates a biomedical knowledge graph (KG) to identify and generate mechanistic hypotheses for pharmacokinetic natural product-drug interactions (NPDIs). NP-KG uses the [PheKnowLator ecosystem](https://github.com/callahantiff/PheKnowLator) to create an ontology-grounded KG. It then uses two relation extraction systems to extract triples from full texts of natural product-related scientific literature to create a literature-based graph, and integrates the nodes and edges in the ontology-grounded KG. 
 
 ## NP-KG Builds
 
-**NP-KG:** Merged PheKnowLator KG and literature-based graph with green tea and kratom literature.
+**NP-KG:** Merged PheKnowLator KG and literature-based graph with 30 natural products.
 
-**Ontology-grounded KG:** PheKnowLator KG with a few [additional data sources](https://github.com/sanyabt/np-kg/wiki/v1.0.0#data-sources).
+**Ontology-grounded KG:** PheKnowLator KG with a few [additional data sources](https://github.com/sanyabt/np-kg/wiki/v3.0.0#data-sources).
 
-**Literature-based Graph:** Literature-based graph constructed from green tea and kratom literature with relation extraction systems (SemRep and INDRA/REACH) and closure operations.
+**Literature-based Graph:** Literature-based graph constructed from scientific literature with relation extraction systems (SemRep and INDRA/REACH) and closure operations.
 
 ## How to Download and Use
 
