@@ -1,4 +1,3 @@
-chemical-diseasetherapeutic, resources/edge_data/chemical-disease_CTD_chemicals_diseases.tsv
 chemical-disease, resources/edge_data/chemical-disease_CTD_chemicals_diseases.tsv
 chemical-gene, resources/edge_data/chemical-gene_CTD_chem_gene_ixns.tsv
 chemical-gobp, resources/edge_data/chemical-gobp_CTD_chem_go_enriched.tsv
@@ -6,7 +5,6 @@ chemical-gocc, resources/edge_data/chemical-gocc_CTD_chem_go_enriched.tsv
 chemical-gomf, resources/edge_data/chemical-gomf_CTD_chem_go_enriched.tsv
 chemical-pathway, resources/edge_data/chemical-pathway_ChEBI2Reactome_All_Levels.txt
 chemical-protein, resources/edge_data/chemical-protein_CTD_chem_gene_ixns.tsv
-chemical-phenotypetherapeutic, resources/edge_data/chemical-disease_CTD_chemicals_diseases.tsv
 chemical-phenotype, resources/edge_data/chemical-disease_CTD_chemicals_diseases.tsv
 disease-phenotype, resources/edge_data/disease-phenotype_phenotype.hpoa
 gene-disease, resources/edge_data/gene-disease_curated_gene_disease_associations.tsv
@@ -38,3 +36,4 @@ chemical-molecule, resources/processed_data/CHEMICAL_MOLECULE.tsv
 chemical-substrate, resources/processed_data/CHEMICAL_SUBSTRATE.tsv
 chemical-inhibitor, resources/processed_data/CHEMICAL_INHIBITOR.tsv
 chemical-indication, resources/processed_data/CHEMICAL_INDICATION.tsv
+chemical-adr, resources/processed_data/CHEMICAL_ADR.tsv
