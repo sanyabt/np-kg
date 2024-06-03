@@ -1,0 +1,211 @@
+INFO:root:Generating ontology extensions for 34 natural products: 
+INFO:root:
+Natural products in the list: dict_keys(['Actaea racemosa', 'Aesculus hippocastanum', 'Allium sativum', 'Camellia sinensis', 'Cannabis sativa', 'Cinnamomum cassia', 'Cinnamomum verum', 'Citrus paradisi', 'Crataegus laevigata', 'Curcuma longa', 'Echinacea purpurea', 'Ginkgo biloba', 'Glycine max', 'Glycyrrhiza glabra', 'Glycyrrhiza inflata', 'Glycyrrhiza uralensis', 'Hydrastis canadensis', 'Linum usitatissimum', 'Mitragyna speciosa', 'Origanum vulgare', 'Panax ginseng', 'Paullinia cupana', 'Piper nigrum', 'Rhodiola rosea', 'Rosmarinus officinalis', 'Serenoa repens', 'Silybum marianum', 'Tanacetum parthenium', 'Trigonella foenum-graecum', 'Vaccinium macrocarpon', 'Valeriana officinalis', 'Withania somnifera', 'Zingiber officinale', 'Taraxacum officinale'])
+INFO:root:
+Total constituents for Actaea racemosa: 64
+INFO:root:
+GSRS constituents: 64
+INFO:root:
+EMA constituents: 0
+INFO:root:
+Total constituents for Aesculus hippocastanum: 16
+INFO:root:
+GSRS constituents: 6
+INFO:root:
+EMA constituents: 10
+INFO:root:
+Total constituents for Allium sativum: 24
+INFO:root:
+GSRS constituents: 5
+INFO:root:
+EMA constituents: 19
+INFO:root:
+Total constituents for Camellia sinensis: 22
+INFO:root:
+GSRS constituents: 3
+INFO:root:
+EMA constituents: 19
+INFO:root:
+Total constituents for Cannabis sativa: 67
+INFO:root:
+GSRS constituents: 67
+INFO:root:
+EMA constituents: 0
+INFO:root:
+Total constituents for Cinnamomum cassia: 12
+INFO:root:
+GSRS constituents: 12
+INFO:root:
+EMA constituents: 0
+INFO:root:
+Total constituents for Cinnamomum verum: 26
+INFO:root:
+GSRS constituents: 14
+INFO:root:
+EMA constituents: 12
+INFO:root:
+Total constituents for Citrus paradisi: 0
+INFO:root:
+GSRS constituents: 0
+INFO:root:
+EMA constituents: 0
+INFO:root:
+Total constituents for Crataegus laevigata: 16
+INFO:root:
+GSRS constituents: 0
+INFO:root:
+EMA constituents: 16
+INFO:root:
+Total constituents for Curcuma longa: 11
+INFO:root:
+GSRS constituents: 2
+INFO:root:
+EMA constituents: 9
+INFO:root:
+Total constituents for Echinacea purpurea: 31
+INFO:root:
+GSRS constituents: 0
+INFO:root:
+EMA constituents: 31
+INFO:root:
+Total constituents for Ginkgo biloba: 18
+INFO:root:
+GSRS constituents: 11
+INFO:root:
+EMA constituents: 7
+INFO:root:
+Total constituents for Glycine max: 25
+INFO:root:
+GSRS constituents: 1
+INFO:root:
+EMA constituents: 24
+INFO:root:
+Total constituents for Glycyrrhiza glabra: 57
+INFO:root:
+GSRS constituents: 17
+INFO:root:
+EMA constituents: 40
+INFO:root:
+Total constituents for Glycyrrhiza inflata: 6
+INFO:root:
+GSRS constituents: 6
+INFO:root:
+EMA constituents: 0
+INFO:root:
+Total constituents for Glycyrrhiza uralensis: 33
+INFO:root:
+GSRS constituents: 33
+INFO:root:
+EMA constituents: 0
+INFO:root:
+Total constituents for Hydrastis canadensis: 2
+INFO:root:
+GSRS constituents: 2
+INFO:root:
+EMA constituents: 0
+INFO:root:
+Total constituents for Linum usitatissimum: 1
+INFO:root:
+GSRS constituents: 1
+INFO:root:
+EMA constituents: 0
+INFO:root:
+Total constituents for Mitragyna speciosa: 6
+INFO:root:
+GSRS constituents: 6
+INFO:root:
+EMA constituents: 0
+INFO:root:
+Total constituents for Origanum vulgare: 1
+INFO:root:
+GSRS constituents: 1
+INFO:root:
+EMA constituents: 0
+INFO:root:
+Total constituents for Panax ginseng: 19
+INFO:root:
+GSRS constituents: 7
+INFO:root:
+EMA constituents: 12
+INFO:root:
+Total constituents for Paullinia cupana: 6
+INFO:root:
+GSRS constituents: 0
+INFO:root:
+EMA constituents: 6
+INFO:root:
+Total constituents for Piper nigrum: 5
+INFO:root:
+GSRS constituents: 5
+INFO:root:
+EMA constituents: 0
+INFO:root:
+Total constituents for Rhodiola rosea: 0
+INFO:root:
+GSRS constituents: 0
+INFO:root:
+EMA constituents: 0
+INFO:root:
+Total constituents for Rosmarinus officinalis: 34
+INFO:root:
+GSRS constituents: 4
+INFO:root:
+EMA constituents: 30
+INFO:root:
+Total constituents for Serenoa repens: 20
+INFO:root:
+GSRS constituents: 20
+INFO:root:
+EMA constituents: 0
+INFO:root:
+Total constituents for Silybum marianum: 18
+INFO:root:
+GSRS constituents: 1
+INFO:root:
+EMA constituents: 17
+INFO:root:
+Total constituents for Tanacetum parthenium: 23
+INFO:root:
+GSRS constituents: 1
+INFO:root:
+EMA constituents: 22
+INFO:root:
+Total constituents for Trigonella foenum-graecum: 18
+INFO:root:
+GSRS constituents: 18
+INFO:root:
+EMA constituents: 0
+INFO:root:
+Total constituents for Vaccinium macrocarpon: 25
+INFO:root:
+GSRS constituents: 0
+INFO:root:
+EMA constituents: 25
+INFO:root:
+Total constituents for Valeriana officinalis: 38
+INFO:root:
+GSRS constituents: 2
+INFO:root:
+EMA constituents: 36
+INFO:root:
+Total constituents for Withania somnifera: 1
+INFO:root:
+GSRS constituents: 1
+INFO:root:
+EMA constituents: 0
+INFO:root:
+Total constituents for Zingiber officinale: 24
+INFO:root:
+GSRS constituents: 8
+INFO:root:
+EMA constituents: 16
+INFO:root:
+Total constituents for Taraxacum officinale: 53
+INFO:root:
+GSRS constituents: 0
+INFO:root:
+EMA constituents: 53
+INFO:root:
+Total constituents added to graph: 722
+INFO:root:
+Unique constituents: 613

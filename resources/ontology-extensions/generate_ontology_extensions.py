@@ -2,6 +2,7 @@
 Script to create ontology extensions for natural products (instance-based).
 Author: Sanya B. Taneja
 Created on: 2023-04-04
+Last run: 2024-02-29
 
 Natural product latin binomials are created as classes with cross reference to Global Substance Registration System (GSRS) identifiers. Instances of classes are connected to natural product constituents (depending on whether the 
 constituents already exist in ChEBI or not). If constituent exists in ChEBI, an instance of the ChEBI class is created and linked to the natural product instance. Else, a new constituent class is created and linked. All classes 
@@ -19,18 +20,17 @@ import logging
 
 DIR_IN = 'resources/'
 DIR_OUT = 'graphs/'
-FILE_IN = DIR_IN + 'EMA_GSRS_constituents_combined_unique_20230403.tsv'
-NP_DICT = DIR_IN + 'np_constituents_reference_dict_20230404.json'
-OUTFILE = DIR_OUT + 'chebi-extensions-constituents-20230405.tsv'
-OUT_GRAPH = DIR_OUT + "chebi-srs-extensions-instance-all-20230405.xml"
-LOG_FILE = "log-ontology-extensions-20230405.txt"
+FILE_IN = DIR_IN + 'EMA_GSRS_NP_constituents_combined_unique_20240116.tsv'
+NP_DICT = DIR_IN + 'np_constituents_reference_dict_20240229.json'
+OUTFILE = DIR_OUT + 'chebi-extensions-constituents-20240229.tsv'
+OUT_GRAPH = DIR_OUT + "chebi-srs-extensions-instance-all-20240229.xml"
+LOG_FILE = "log-ontology-extensions-20240229.txt"
 logging.basicConfig(filename=LOG_FILE, filemode='a', level=logging.INFO)
 
 with open(NP_DICT, 'r') as filein:
 	np_dict = json.load(filein)
 
 NP_LIST = np_dict.keys()
-#NP_LIST = ['Camellia sinensis', 'Mitragyna speciosa', 'Curcuma longa']
 logging.info('Generating ontology extensions for {} natural products: '.format(len(NP_LIST)))
 logging.info('\nNatural products in the list: {}'.format(NP_LIST))
 
@@ -220,9 +220,9 @@ if __name__ == "__main__":
 	logging.info('\nUnique constituents: %d', len(dfout))
 	dfout.to_csv(OUTFILE, sep='\t', index=False)
 
-	#f = open(OUT_GRAPH,"w")
-	#graph_str = graph.serialize(format='xml').decode('utf-8')
-	#f.write(graph_str)
-	#f.close()
+	f = open(OUT_GRAPH,"w")
+	graph_str = graph.serialize(format='xml').decode('utf-8')
+	f.write(graph_str)
+	f.close()
 
 	graph.close()
