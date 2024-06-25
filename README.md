@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.6814507.svg)](https://doi.org/10.5281/zenodo.6814507)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.12536780.svg)](https://doi.org/10.5281/zenodo.12536780)
 
 # NP-KG
 
@@ -27,18 +27,17 @@ python -m pip install -r requirements.txt
 
 ### If you want to use the pre-built KGs
 
-1. [Download the knowledge graph and node labels files from Zenodo](https://doi.org/10.5281/zenodo.6814507) and add to local folder - resources/knowledge_graphs. NP-KG is available as TSV file with triples and NetworkX multidigraph (gpickle files).
+1. [Download the knowledge graph and node labels files from Zenodo](https://doi.org/10.5281/zenodo.12536780) and add to local folder - resources/knowledge_graphs. NP-KG is available as TSV file with triples and NetworkX multidigraph (gpickle files).
 
 * **Merged KG:** includes merged PheKnowLator KG and literature-based graph. Download this file if you do not know which KG to use.
-	* Filename: _NP-KG_v2.0.0.tsv_
-	* Filename: _NP-KG_v2.0.0.gpickle_
+	* Filename: _NP-KG_v3.0.0.tsv_
+	* Filename: _NP-KG_v3.0.0.gpickle_
 * **PheKnowLator KG:** includes full instance-based build of the PheKnowLator KG. See [PheKnowLator](https://github.com/callahantiff/PheKnowLator) for more details.
-	* Filename: _PheKnowLator_v3.1.1_full_instance_inverseRelations_OWLNETS_NetworkxMultiDiGraph.gpickle_
-* **Literature-based graph:** includes all nodes and edges extracted from full texts of green tea and kratom literature and inferred edges.
-	* Filename: _machine_read_merged_v2.0.0.gpickle_
+	* Filename: _PheKnowLator_v3.1.2_full_instance_inverseRelations_OWLNETS_NetworkxMultiDiGraph.gpickle_
 
-### Node Labels
-* Download _nodeLabels_v2.0.0.tsv_ file with all node labels for the merged KG.
+### Node Labels and Node Types
+* Download _nodeLabels_v3.0.0.tsv_ file with all node labels for the merged KG.
+* Download _nodeTypes_v3.0.0.tsv_ file with node types for all nodes in the merged KG.
 
 2. See [evaluation-scripts](https://github.com/sanyabt/np-kg/tree/main/evaluation-scripts) for examples of queries and path searches.
 
@@ -46,7 +45,28 @@ Note: The download link also contains the KGs as gpickle and ntriples files with
 
 ### Loading NP-KG with GRAPE
 
-NP-KG (v1.0.1) can also be loaded with the Graph Representation Learning library [GRAPE](https://github.com/AnacletoLAB/grape) as below. See [NP-KG Grape Animation tutorial](https://github.com/sanyabt/np-kg/blob/main/resources/NPKG-Grape-Animation.ipynb) for details.
+The Graph Representation Learning library [GRAPE](https://github.com/AnacletoLAB/grape) provides efficient graph embeddings. To load NP-KG (version 3.0.0) in GRAPE, use the _from_csv_ function and TSV files mentioned above:
+
+```
+npkg = Graph.from_csv(
+            node_path=<TSV node types filename>,
+            node_list_node_types_column_number=1,
+            nodes_column_number=0,
+            node_list_separator='\t',
+            node_list_header=True,
+            edge_path=<TSV version of KG filename>,
+            edge_list_separator='\t',
+            edge_list_header=True,
+            edge_list_edge_types_column_number=1,
+            sources_column_number=0,
+            destinations_column_number=2,
+            weights_column_number=3,
+            directed=True,
+            verbose=True
+        )
+```
+
+NP-KG (v1.0.1) can also be loaded with as below. See [NP-KG Grape Animation tutorial](https://github.com/sanyabt/np-kg/blob/main/resources/NPKG-Grape-Animation.ipynb) for details.
 
 ```python
 pip install grape -U
@@ -102,18 +122,16 @@ Cite this Work
 **Zenodo Dataset**
 
 ```
-@dataset{taneja_sanya_bathla_2022_6814507,
+@dataset{taneja_sanya_bathla_2024_12536780,
   author       = {Taneja, Sanya Bathla},
-  title        = {{NP-KG: Knowledge Graph Framework for Natural 
-                   Product-Drug Interactions}},
-  month        = aug,
-  year         = 2022,
-  note         = {{Supporting Grant - National Institutes of Health 
-                   National Center for Complementary and Integrative
-                   Health Grant U54 AT008909}},
+  title        = {{NP-KG: Knowledge Graph for Natural Product-Drug 
+                   Interactions}},
+  month        = jun,
+  year         = 2024,
   publisher    = {Zenodo},
-  doi          = {10.5281/zenodo.6814507},
-  url          = {https://doi.org/10.5281/zenodo.6814507}
+  version      = {3.0.0},
+  doi          = {10.5281/zenodo.12536780},
+  url          = {https://doi.org/10.5281/zenodo.12536780}
 }
 ```
 
